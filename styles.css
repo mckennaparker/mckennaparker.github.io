@@ -22,32 +22,30 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    height: 50px;
+    height: 100px;
     background-color: rgba(255, 255, 255, 0.6);
 }
 
 #nav-icons {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 32px;
+    left: 15px;
     list-style: none;
     display: flex;
     flex-direction: row;
-    margin: 12px 20px;
 }
 
 #nav-page-sections {
     position: fixed;
-    top: 0;
+    top: 32px;
     right: 15px;
     list-style: none;
     display: flex;
     flex-direction: row;
-    margin-top: 12px;
 }
 
 #nav-icons > li {
-    margin-right: 40%;
+    margin-right: 40px;
 }
 
 #nav-page-sections > li {
@@ -58,7 +56,7 @@ nav {
 a {
     text-decoration: none;
     color: black;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
 }
 
 a:hover {
@@ -68,15 +66,16 @@ a:hover {
 
 #home {
     width: 85%;
-    margin: 18vh auto;
+    margin: 200px auto 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding-bottom: 100px;
+    border-bottom: 3px solid white;
 }
 
 #home-text {
-    margin-right: 20px;
     width: 50%;
 }
 
@@ -86,6 +85,7 @@ a:hover {
 }
 
 #home-text p {
+    margin-top: 20px;
     font-size: 1.4rem;
     text-align: left;
 }
@@ -95,11 +95,19 @@ a:hover {
     float: left;
 }
 
-img {
-    width: 90%;
-    height: auto;
+#home-img img {
+    width: min(430px, 75%);;
+    display: block;
+    margin-left: auto;
+    border: 2px solid white;
+    border-radius: 5px;
 }
 
 #about {
-    margin: 20vh 5vw 20vh 5vw;
+    width: 85%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
