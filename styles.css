@@ -242,3 +242,15 @@ a:hover {
     line-height: 1.5;
     padding-top: 5px;
 }
+
+#portfolio {
+    width: 90%;
+    margin: 25px auto;
+    padding-bottom: 50px;
+    border-bottom: 3px solid white;
+}
+
+#project-container {
+    display: grid;
+    
+}
