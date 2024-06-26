@@ -22,13 +22,12 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100px;
-    background-color: rgba(255, 255, 255, 0.6);
+    height: 75px;
+    background-color: rgba(0, 0, 0, 0.35);
 }
 
 #nav-icons {
     position: fixed;
-    top: 32px;
     left: 15px;
     list-style: none;
     display: flex;
@@ -37,7 +36,6 @@ nav {
 
 #nav-page-sections {
     position: fixed;
-    top: 32px;
     right: 15px;
     list-style: none;
     display: flex;
@@ -55,7 +53,7 @@ nav {
 
 a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 1.6rem;
 }
 
@@ -250,7 +248,33 @@ a:hover {
     border-bottom: 3px solid white;
 }
 
-#project-container {
-    display: grid;
-    
+.project-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.project video {
+    width: 100%;
+    min-width: 300px;
+    max-width: 500px;
+    margin-bottom: 10px;
+    border: 2px white solid;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.project-text {
+    text-align: center;
+    margin-top: 10px;
 }
