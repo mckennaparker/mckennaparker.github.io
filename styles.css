@@ -245,7 +245,6 @@ a:hover {
     width: 90%;
     margin: 25px auto;
     padding-bottom: 50px;
-    border-bottom: 3px solid white;
 }
 
 .project-container {
@@ -277,4 +276,12 @@ a:hover {
 .project-text {
     text-align: center;
     margin-top: 10px;
+}
+
+footer {
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    color: #02369E;
 }
