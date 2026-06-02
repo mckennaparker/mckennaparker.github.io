@@ -1,19 +1,36 @@
 import ProjectCard from './components/ProjectCard'
 import './App.css'
+import Nav from './components/Nav'
+import Footer from './components/Footer'
 
 function App() {
   return (
     <div className="App">
-      <h1>McKenna Parker</h1>
-      <p>Welcome to my personal website! I'm a software developer with a passion for creating innovative solutions. Here, you can find information about my projects, skills, and experience. Feel free to explore and connect with me!</p>
-      <div className="projects">
-        <h2>Projects</h2>
-        <div className="project-list">
-          <ProjectCard title="Project 1" description="A web application that allows users to track their fitness goals." link="" />
-          <ProjectCard title="Project 2" description="A web application that allows users to track their fitness goals." link="" />
-          <ProjectCard title="Project 3" description="A web application that allows users to track their fitness goals." link="" />
+      <Nav current="Home" />
+      <div className="content">
+        <div className="about">
+          <div className="about-img">
+            <img src="/me.JPG" alt="A picture of McKenna on a boat at sunset" />
+          </div>
+          <div className="about-info">
+            <h2>Hi, I'm McKenna!</h2>
+            <p>I'm a rising senior at the University of Pennsylvania studying in the interdisciplinary <a href="https://cg.cis.upenn.edu/dmd.html" target="_blank">Digital Media Design</a> program, which combines computer science and fine arts coursework. Through coursework in computer graphics, immersive media, and user experience design, I've developed a strong foundation in both technical and creative skills which I hope to use to create engaging and novel digital experiences.</p>
+            <br />
+            <p>Throughout my page (and on my <a href="">resume</a>) you can see some of my projects in both computer graphics and UX/UI design. Also feel free to check out my blog posts where I hope to continue writing about what I learn through my projects and experiences!</p>
+            <br />
+            <p>When I'm not learning, you can find me playing ultimate frisbee, trying out a new recipe, or traveling!</p>
+          </div>
+        </div>
+        <div className="projects">
+          <h3>Recent Projects</h3>
+          <div className="project-list">
+            <ProjectCard title="Project 1" description="A web application that allows users to track their fitness goals." link="" />
+            <ProjectCard title="Project 2" description="A web application that allows users to track their fitness goals." link="" />
+            <ProjectCard title="Project 3" description="A web application that allows users to track their fitness goals." link="" />
+          </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
