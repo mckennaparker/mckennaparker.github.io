@@ -1,12 +1,10 @@
 import ProjectCard from './components/ProjectCard'
 import './App.css'
-import Nav from './components/Nav'
 import Footer from './components/Footer'
 
 function App() {
   return (
     <div className="App">
-      <Nav current="Home" />
       <div className="content">
         <div className="about">
           <div className="about-img">

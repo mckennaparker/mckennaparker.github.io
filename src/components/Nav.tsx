@@ -1,13 +1,19 @@
-function Nav({ current }: { current: string }) {
+import { Outlet, NavLink } from 'react-router'
+
+function Nav() {
     return (
-        <nav className="nav">
-            <h3>McKenna Parker</h3>
-            <div className="nav-links">
-                <a href="#home" className={current === "Home" ? "active" : ""}><p>About</p></a>
-                <a href="#projects" className={current === "Graphics" ? "active" : ""}><p>Computer Graphics</p></a>
-                <a href="#design" className={current === "Design" ? "active" : ""}><p>UX/UI Design</p></a>
-            </div>
-        </nav>
+        <div>
+            <nav className="nav">
+                <h3>McKenna Parker</h3>
+                <div className="nav-links">
+                    <NavLink to="/" end className={({ isActive }) => isActive ? "active" : ""}><p>About</p></NavLink>
+                    <NavLink to="/projects" className={({ isActive }) => isActive ? "active" : ""}><p>Portfolio</p></NavLink>
+                    <NavLink to="/blog" className={({ isActive }) => isActive ? "active" : ""}><p>Blog</p></NavLink>
+                    <NavLink to="/resume" className={({ isActive }) => isActive ? "active" : ""}><p>Resume</p></NavLink>
+                </div>
+            </nav>
+            <Outlet />
+        </div>
     );
 };
 
