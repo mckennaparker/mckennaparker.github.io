@@ -22,9 +22,9 @@ function App() {
         <div className="projects">
           <h3>Recent Projects</h3>
           <div className="project-list">
-            <ProjectCard title="Project 1" description="A web application that allows users to track their fitness goals." link="" />
-            <ProjectCard title="Project 2" description="A web application that allows users to track their fitness goals." link="" />
-            <ProjectCard title="Project 3" description="A web application that allows users to track their fitness goals." link="" />
+            <ProjectCard className="project-card-about" title="Project 1" description="A web application that allows users to track their fitness goals." link="" />
+            <ProjectCard className="project-card-about" title="Project 2" description="A web application that allows users to track their fitness goals." link="" />
+            <ProjectCard className="project-card-about" title="Project 3" description="A web application that allows users to track their fitness goals." link="" />
           </div>
         </div>
       </div>

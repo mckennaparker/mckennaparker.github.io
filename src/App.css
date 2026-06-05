@@ -77,7 +77,7 @@ p {
 }
 
 .content {
-  max-width: 1200px;
+  max-width: 1400px;
   width: 85%;
   margin: 0 auto;
   display: flex;
@@ -131,12 +131,14 @@ p {
   gap: 16px;
 }
 
-.project-list .project-card {
+.project-card-about {
   flex: 1 1;
   color: #091B2F;
-  border-radius: 8px;
-  padding: 1rem;
-  border: 3px solid #ccc;
+  border-radius: 16px;
+  padding: 1.25rem;
+  border: 2px solid #A9AAF4;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F4F7FF 100%);
+  box-shadow: 0 10px 30px rgba(9, 27, 47, 0.08);
 }
 
 .footer {

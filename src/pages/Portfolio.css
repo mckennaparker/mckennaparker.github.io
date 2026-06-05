@@ -1,5 +1,51 @@
 .portfolio {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  width: 100%;
+  gap: 48px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio-content {
+  width: 85%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.project-card {
+  color: #091B2F;
+}
+
+.project-card-portfolio {
+  background-color: lightblue;
+  border-radius: 8px;
+  padding: 1rem;
+  border: 3px solid #8FB8D8;
+}
+
+.footer {
+  width: 100%;
+  background-color: #A9AAF4;
+  color: #091B2F;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  padding: 16px 0 4px 0;
+}
+
+.footer .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer a {
+  color: #091B2F;
 }
