@@ -118,6 +118,42 @@ p {
   font-weight: 500;
 }
 
+.currently {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: -16px;
+}
+
+.currently-item {
+  color: #091B2F;
+  border-radius: 16px;
+  border: 2px solid #A9AAF4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 16px;
+}
+
+.currently-item h4 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.currently-item p {
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.currently-item img {
+  height: 164px;
+}
+
 .projects {
   display: flex;
   flex-direction: column;

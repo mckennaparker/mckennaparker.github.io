@@ -19,6 +19,26 @@ function App() {
             <p>When I'm not learning, you can find me playing ultimate frisbee, trying out a new recipe, or traveling!</p>
           </div>
         </div>
+        <div className="currently">
+          <div className="currently-item listening">
+            <h4>Currently Listening</h4>
+            <img src="/sawayama.png" alt="Spotify logo" />
+            <p>Commes Des Garçons (Like The Boys)</p>
+            <p>Rina Sawayama</p>
+          </div>
+          <div className="currently-item watching">
+            <h4>Currently Watching</h4>
+            <img src="/loveIsland.avif" alt="Love Island logo" />
+            <p>Love Island USA</p>
+            <p>Season 8</p>
+          </div>
+          <div className="currently-item reading">
+            <h4>Currently Reading</h4>
+            <img src="/longGame.webp" alt="The Long Game book cover" />
+            <p>The Long Game</p>
+            <p>Rachel Reid</p>
+          </div>
+        </div>
         <div className="projects">
           <h3>Recent Projects</h3>
           <div className="project-list">
