@@ -13,21 +13,21 @@ export interface BlogPost {
 const blogPostData: BlogPost[] = [
   {
     id: 2,
-    title: 'Blender Learning Log - Part Two',
-    date: '2025-08-09',
+    title: 'Houdini Learning Log: Foundations VFX Course',
+    date: '2026-06-12',
     author: 'McKenna Parker',
-    url: '/blogs/blender-learning-log-two.html',
-    tags: ['Blender', '3D Modeling', 'Animation'],
-    snippet: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    url: '/blog/houdini-learning-log-foundations-vfx',
+    tags: ['Houdini', '3D Modeling', 'Animation'],
+    snippet: 'The second entry in my Houdini learning log series where I detail my Houdini learning journey in a blog style. ',
   },
   {
     id: 1,
-    title: 'Blender Learning Log - Part One',
-    date: '2025-08-02',
+    title: 'Houdini Learning Log: Foundations Welcome Course',
+    date: '2026-06-09',
     author: 'McKenna Parker',
-    url: '/blogs/blender-learning-log-one.html',
-    tags: ['Blender', '3D Modeling', 'Animation'],
-    snippet: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    url: '/blog/houdini-learning-log-foundations-welcome',
+    tags: ['Houdini', '3D Modeling', 'Animation'],
+    snippet: "The first of me Houdini Learning Logs where I detail my Houdini learning journey. Following the H21 Foundations Welcome course, I created a rendered animation of candy falling into a mug. Feel free to check out the process video and renders or read through to learn about the process and what I took away.",
   },
 ]
 

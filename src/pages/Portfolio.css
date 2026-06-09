@@ -28,7 +28,7 @@
   gap: 8px;
 }
 
-.section {
+.project-section {
   display: flex;
   flex-direction: column;
   gap: 24px;

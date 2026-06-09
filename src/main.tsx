@@ -6,6 +6,8 @@ import App from './App.tsx'
 import './App.css'
 import Blog from './pages/Blog.tsx'
 import Portfolio from './pages/Portfolio.tsx'
+import HoudiniLearningLogFoundationsWelcome from './pages/blogs/HoudiniLearningLogFoundationsWelcome.tsx'
+import HoudiniLearningLogFoundationsVFX from './pages/blogs/HoudiniLearningLogFoundationsVFX.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -16,6 +18,8 @@ createRoot(document.getElementById('root')!).render(
           <Route path="projects" element={<Portfolio />} />
           <Route path="blog" element={<Blog />} />
           <Route path="resume" element={<div><h1>Resume</h1></div>} />
+          <Route path="/blog/houdini-learning-log-foundations-welcome" element={<HoudiniLearningLogFoundationsWelcome />} />
+          <Route path="/blog/houdini-learning-log-foundations-vfx" element={<HoudiniLearningLogFoundationsVFX />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -12,7 +12,7 @@ function Portfolio() {
             <div className="portfolio-content">
                 <div className="project-sections">
                     <h1>Portfolio</h1>
-                    <div className="graphics-section section">
+                    <div className="project-section">
                         <div className="section-text">
                             <h3>Graphics Projects</h3>
                             <p className="portfolio-intro">
@@ -25,7 +25,7 @@ function Portfolio() {
                             ))}
                         </div>
                     </div>
-                    <div className="design-section section">
+                    <div className="project-section">
                         <div className="section-text">
                             <h3>UX/UI Projects</h3>
                             <p className="portfolio-intro">
