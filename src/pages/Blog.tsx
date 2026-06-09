@@ -2,6 +2,7 @@ import './Blog.css'
 import BlogCard from "../components/BlogCard";
 import Footer from '../components/Footer.tsx';
 import { blogPosts } from '../data/blogs';
+import { Outlet } from 'react-router'
 
 function Blog() {
     return (
@@ -15,6 +16,7 @@ function Blog() {
                 </div>
             </div>
             <Footer />
+            <Outlet />
         </div>
     );
 };

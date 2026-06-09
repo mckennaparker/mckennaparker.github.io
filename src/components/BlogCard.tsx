@@ -1,5 +1,6 @@
 import type { BlogPost } from '../data/blogs'
 import { formatDisplayDate } from '../data/content'
+import { NavLink } from 'react-router'
 
 type BlogCardProps = {
     blog: BlogPost
@@ -9,7 +10,7 @@ type BlogCardProps = {
 function BlogCard({ blog, className = '' }: BlogCardProps) {
     return (
         <article className={`blog-card ${className}`.trim()}>
-            <a className="blog-card-link" href={blog.url}>
+            <NavLink className="blog-card-link" to={blog.url}>
                 <div className="blog-card-body">
                     <div className="blog-card-meta">
                         <span>{formatDisplayDate(blog.date)}</span>
@@ -26,7 +27,7 @@ function BlogCard({ blog, className = '' }: BlogCardProps) {
                     </div>
                     <span className="card-cta">Read More</span>
                 </div>
-            </a>
+            </NavLink>
         </article>
     )
 }
