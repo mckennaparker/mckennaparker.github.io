@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { HashRouter, Route, Routes } from 'react-router'
+import { BrowserRouter, Route, Routes } from 'react-router'
 import Nav from './components/Nav.tsx'
 import App from './App.tsx'
 import './App.css'
@@ -11,7 +11,7 @@ import HoudiniLearningLogFoundationsVFX from './pages/blogs/HoudiniLearningLogFo
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Nav />}>
           <Route index element={<App />} />
@@ -26,6 +26,6 @@ createRoot(document.getElementById('root')!).render(
           <Route path="resume" element={<div><h1>Resume</h1></div>} />
         </Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   </StrictMode>,
 )
