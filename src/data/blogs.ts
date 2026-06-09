@@ -27,7 +27,7 @@ const blogPostData: BlogPost[] = [
     author: 'McKenna Parker',
     url: '/blog/houdini-learning-log-foundations-welcome',
     tags: ['Houdini', '3D Modeling', 'Animation'],
-    snippet: "The first of me Houdini Learning Logs where I detail my Houdini learning journey. Following the H21 Foundations Welcome course, I created a rendered animation of candy falling into a mug. Feel free to check out the process video and renders or read through to learn about the process and what I took away.",
+    snippet: "The first of my Houdini Learning Logs where I detail my Houdini learning journey. Following the H21 Foundations Welcome course, I created a rendered animation of candy falling into a mug. Feel free to check out the process video and renders or read through to learn about the process and what I took away.",
   },
 ]
 
