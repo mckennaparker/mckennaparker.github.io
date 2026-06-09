@@ -1,14 +1,21 @@
 import ProjectCard from './components/ProjectCard'
+import BlogCard from './components/BlogCard'
 import './App.css'
 import Footer from './components/Footer'
+import { projects } from './data/projects.ts'
+import { blogPosts } from './data/blogs.ts'
+import { takeFirst } from './data/content.ts'
 
 function App() {
+  const recentProjects = takeFirst(projects, 3)
+  const recentBlogs = takeFirst(blogPosts, 3)
+
   return (
     <div className="App">
       <div className="content">
         <div className="about">
           <div className="about-img">
-            <img src="/me.JPG" alt="A picture of McKenna on a boat at sunset" />
+            <img className="about-img-main" src="/me.JPG" alt="A picture of McKenna on a boat at sunset" />
           </div>
           <div className="about-info">
             <h2>Hi, I'm McKenna!</h2>
@@ -19,32 +26,20 @@ function App() {
             <p>When I'm not learning, you can find me playing ultimate frisbee, trying out a new recipe, or traveling!</p>
           </div>
         </div>
-        <div className="currently">
-          <div className="currently-item listening">
-            <h4>Currently Listening</h4>
-            <img src="/sawayama.png" alt="Spotify logo" />
-            <p>Commes Des Garçons (Like The Boys)</p>
-            <p>Rina Sawayama</p>
-          </div>
-          <div className="currently-item watching">
-            <h4>Currently Watching</h4>
-            <img src="/loveIsland.avif" alt="Love Island logo" />
-            <p>Love Island USA</p>
-            <p>Season 8</p>
-          </div>
-          <div className="currently-item reading">
-            <h4>Currently Reading</h4>
-            <img src="/longGame.webp" alt="The Long Game book cover" />
-            <p>The Long Game</p>
-            <p>Rachel Reid</p>
-          </div>
-        </div>
         <div className="projects">
           <h3>Recent Projects</h3>
           <div className="project-list">
-            <ProjectCard className="project-card-about" title="Project 1" description="A web application that allows users to track their fitness goals." link="" />
-            <ProjectCard className="project-card-about" title="Project 2" description="A web application that allows users to track their fitness goals." link="" />
-            <ProjectCard className="project-card-about" title="Project 3" description="A web application that allows users to track their fitness goals." link="" />
+            {recentProjects.map((project) => (
+              <ProjectCard key={project.id} className="project-card-about" project={project} />
+            ))}
+          </div>
+        </div>
+        <div className="blogs">
+          <h3>Recent Blogs</h3>
+          <div className="blog-list-about">
+            {recentBlogs.map((blog) => (
+              <BlogCard key={blog.id} className="blog-card-about" blog={blog} />
+            ))}
           </div>
         </div>
       </div>

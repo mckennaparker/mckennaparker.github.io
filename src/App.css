@@ -54,6 +54,7 @@ p {
   align-items: center;
   padding: 0 48px;
   margin-bottom: 48px;
+  z-index: 1000;
 }
 
 .nav-links {
@@ -82,7 +83,8 @@ p {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 32px;
+  /* background-color: purple; */
 }
 
 .content h3 {
@@ -90,22 +92,34 @@ p {
 }
 
 .about {
+  width: 100%;
   display: flex;
   flex-direction: row;
   gap: 24px;
-  align-items: flex-start;
+  justify-content: space-between;
+  /* background-color: pink; */
 }
 
-.about > * {
+.about>* {
   flex: 1 1 0;
   min-width: 0;
 }
 
-.about-img img {
+.about-img {
+  /* background-color: lightblue; */
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.about-img-main {
+  max-width: 500px;
+  min-width: 256px;
   width: 100%;
   display: block;
   border-radius: 8px;
   object-fit: cover;
+  /* background-color: green; */
 }
 
 .about-info h2 {
@@ -118,63 +132,154 @@ p {
   font-weight: 500;
 }
 
-.currently {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 24px;
-  margin-top: -16px;
-}
-
-.currently-item {
-  color: #091B2F;
-  border-radius: 16px;
-  border: 2px solid #A9AAF4;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
-  padding: 16px;
-}
-
-.currently-item h4 {
-  font-size: 20px;
-  margin-bottom: 8px;
-}
-
-.currently-item p {
-  font-size: 16px;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-.currently-item img {
-  height: 164px;
-}
-
 .projects {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  /* background-color: lightcoral; */
 }
 
 .project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.blogs {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 24px;
+  /* background-color: lightcoral; */
+}
+
+.blog-list-about {
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 16px;
 }
 
-.project-card-about {
-  flex: 1 1;
+.project-card {
   color: #091B2F;
+  min-width: 300px;
+  flex: 1 1 0;
   border-radius: 16px;
-  padding: 1.25rem;
-  border: 2px solid #A9AAF4;
-  background: linear-gradient(180deg, #FFFFFF 0%, #F4F7FF 100%);
-  box-shadow: 0 10px 30px rgba(9, 27, 47, 0.08);
+  padding: 16px;
+  border: 2px solid #8FB8D8;
+  background: #FAFAFA;
+}
+
+.project-card .project-card-image {
+  border-radius: 12px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.project-card,
+.blog-card {
+  border-radius: 16px;
+  border: 1px solid #8FB8D8;
+  background: #FAFAFA;
+  box-shadow: 0 10px 24px rgba(9, 27, 47, 0.08);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.project-card:hover,
+.blog-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(9, 27, 47, 0.12);
+}
+
+.project-card-link,
+.blog-card-link {
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+}
+
+.project-card-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card-placeholder {
+  aspect-ratio: 16 / 10;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(143, 184, 216, 0.3), rgba(169, 170, 244, 0.35));
+  color: #163D64;
+  font-weight: 700;
+}
+
+.project-card-body,
+.blog-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+}
+
+.blog-card-body {
+  padding: 16px 32px;
+}
+
+.project-card-meta,
+.blog-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: rgba(9, 27, 47, 0.7);
+  font-size: 14px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-chip {
+  border-radius: 999px;
+  border: 1px solid rgba(143, 184, 216, 0.8);
+  background: rgba(143, 184, 216, 0.12);
+  color: #163D64;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 4px 10px;
+}
+
+.card-cta {
+  color: #163D64;
+  font-weight: 700;
+  margin-top: auto;
+}
+
+.blog-card-about {
+  color: #091B2F;
+  min-width: 300px;
+  flex: 1 1 0;
+  border-radius: 16px;
+  padding: 8px 16px;
+  border: 2px solid #8FB8D8;
+  background: #FAFAFA;
+}
+
+.blog-card-about .blog-card-body {
+  gap: 8px;
+  padding: 8px;
+}
+
+.blog-card-about h2 {
+  font-size: 20px;
+}
+
+.blog-card-about p {
+  font-size: 14px;
 }
 
 .footer {
@@ -200,13 +305,13 @@ p {
   color: #091B2F;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   .about {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: stretch;
   }
 
-  .about > * {
+  .about>* {
     flex: 0 0 auto;
   }
 }

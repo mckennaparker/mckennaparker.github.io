@@ -16,15 +16,36 @@
   gap: 48px;
 }
 
-.project-card {
-  color: #091B2F;
+.project-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.section-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.portfolio-intro {
+  max-width: 720px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
 }
 
 .project-card-portfolio {
-  background-color: lightblue;
-  border-radius: 8px;
-  padding: 1rem;
-  border: 3px solid #8FB8D8;
+  color: #091B2F;
 }
 
 .footer {
