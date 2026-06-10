@@ -1,5 +1,6 @@
 import type { Project } from '../data/projects.ts'
 import { formatDisplayDate } from '../data/content.ts'
+import { NavLink } from 'react-router'
 
 type ProjectCardProps = {
   project: Project
@@ -11,7 +12,7 @@ function ProjectCard({ project, className = '' }: ProjectCardProps) {
 
   return (
     <article className={`project-card ${className}`.trim()}>
-      <a className="project-card-link" href={project.link}>
+      <NavLink className="project-card-link" to={project.link}>
         {previewImage ? (
           <img className="project-card-image" src={previewImage} alt={`${project.title} thumbnail`} />
         ) : (
@@ -35,7 +36,7 @@ function ProjectCard({ project, className = '' }: ProjectCardProps) {
           </div>
           <span className="card-cta">View Project</span>
         </div>
-      </a>
+      </NavLink>
     </article>
   )
 }

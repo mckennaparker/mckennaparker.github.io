@@ -2,6 +2,7 @@ import Footer from '../components/Footer.tsx';
 import ProjectCard from '../components/ProjectCard.tsx';
 import './Portfolio.css';
 import { projects } from '../data/projects.ts';
+import { Outlet } from 'react-router'
 
 function Portfolio() {
     const graphicsProjects = projects.filter((project) => project.type === 'graphics' || !project.type);
@@ -41,6 +42,7 @@ function Portfolio() {
                 </div>
             </div>
             <Footer />
+            <Outlet />
         </div>
     );
 };
