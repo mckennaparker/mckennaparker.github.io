@@ -1,5 +1,4 @@
 import type { Project } from '../data/projects.ts'
-import { formatDisplayDate } from '../data/content.ts'
 import { NavLink } from 'react-router'
 
 type ProjectCardProps = {
@@ -22,8 +21,7 @@ function ProjectCard({ project, className = '' }: ProjectCardProps) {
         )}
         <div className="project-card-body">
           <div className="project-card-meta">
-            <span>{formatDisplayDate(project.date)}</span>
-            <span>{project.id}</span>
+            <span>{project.date}</span>
           </div>
           <h4>{project.title}</h4>
           <p>{project.description}</p>
