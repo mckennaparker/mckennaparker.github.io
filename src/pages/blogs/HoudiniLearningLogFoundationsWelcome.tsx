@@ -17,7 +17,6 @@ function HoudiniLearningLogFoundationsWelcome() {
                 </div>
                 <video className="hero-image" controls>
                     <source src="../blogs/houdiniLearningLog.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
                 </video>
                 <div className="blog-sections">
                     <div className="blog-section">
