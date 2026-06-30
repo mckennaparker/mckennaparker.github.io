@@ -31,21 +31,36 @@
 .project-section {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
-.portfolio-intro {
-  max-width: 720px;
+.project-section h4 {
+  font-weight: normal;
 }
 
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
+.slick-prev:before,
+.slick-next:before {
+  color: #091B2F;
+}
+
+.slick-dots li {
+  margin: 2px !important;
+}
+
+.slick-dots li button:before {
+  color: #A9AAF4;
+  font-size: 16px;
+  opacity: 1;
+}
+
+.slick-active button:before {
+  color: #0B0C72 !important;
+  opacity: 1;
 }
 
 .project-card-portfolio {
   color: #091B2F;
+  margin: 20px;
 }
 
 .footer {

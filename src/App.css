@@ -178,16 +178,15 @@ p {
 .project-card,
 .blog-card {
   border-radius: 16px;
-  border: 1px solid #8FB8D8;
+  border: 2px solid #8FB8D8;
   background: #FAFAFA;
-  box-shadow: 0 10px 24px rgba(9, 27, 47, 0.08);
   transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
 .project-card:hover,
 .blog-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 32px rgba(9, 27, 47, 0.12);
+  box-shadow: 0 7px 16px rgba(9, 27, 47, 0.12);
 }
 
 .project-card-link,

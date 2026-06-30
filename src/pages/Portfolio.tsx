@@ -1,43 +1,79 @@
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 import Footer from '../components/Footer.tsx';
 import ProjectCard from '../components/ProjectCard.tsx';
 import './Portfolio.css';
 import { projects } from '../data/projects.ts';
 import { Outlet } from 'react-router'
 
+const SlickSlider = ((Slider as unknown as { default?: typeof Slider }).default ?? Slider) as typeof Slider;
+
+function CustomArrow(props: any) {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={className}
+            style={{ ...style, display: "block", caretColor: "red" }}
+            onClick={onClick}
+        />
+    )
+}
+
 function Portfolio() {
     const graphicsProjects = projects.filter((project) => project.type === 'graphics' || !project.type);
     const uxUiProjects = projects.filter((project) => project.type === 'web' || project.type === 'AI/ML');
+
+    const settings = {
+        dots: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        autoPlay: true,
+        appendDots: dots => (
+            <div
+                style={{
+                    borderRadius: "10px",
+                    padding: "10px",
+                }}
+            >
+                <ul style={{ margin: "-10px" }}> {dots} </ul>
+            </div>
+        )
+    }
 
     return (
         <div className="portfolio">
             <div className="portfolio-content">
                 <div className="project-sections">
-                    <h1>Portfolio</h1>
                     <div className="project-section">
                         <div className="section-text">
-                            <h3>Graphics Projects</h3>
-                            <p className="portfolio-intro">
+                            <h2>Graphics Projects</h2>
+                            <h4 className="portfolio-intro">
                                 A selection of recent projects across animation, procedural modeling, and graphics work.
-                            </p>
+                            </h4>
                         </div>
-                        <div className="portfolio-grid">
+                        <SlickSlider {...settings} className="portfolio-slider">
                             {graphicsProjects.map((project) => (
                                 <ProjectCard key={project.id} className="project-card-portfolio" project={project} />
                             ))}
-                        </div>
+                        </SlickSlider>
                     </div>
                     <div className="project-section">
                         <div className="section-text">
-                            <h3>UX/UI Projects</h3>
-                            <p className="portfolio-intro">
-                                A selection of recent projects across animation, procedural modeling, and graphics work.
-                            </p>
+                            <h2>UX/UI Projects</h2>
+                            <h4 className="portfolio-intro">
+                                A selection of recent projects across user interface design, human-computer interaction, and web development.
+                            </h4>
                         </div>
-                        <div className="portfolio-grid">
+                        <SlickSlider {...settings} className="portfolio-slider">
                             {uxUiProjects.map((project) => (
                                 <ProjectCard key={project.id} className="project-card-portfolio" project={project} />
                             ))}
-                        </div>
+                        </SlickSlider>
                     </div>
                 </div>
             </div>

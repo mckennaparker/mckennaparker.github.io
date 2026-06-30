@@ -7,7 +7,7 @@ type ProjectCardProps = {
 }
 
 function ProjectCard({ project, className = '' }: ProjectCardProps) {
-  const previewImage = project.thumbnail ?? project.imageUrl
+  const previewImage = project.thumbnail
 
   return (
     <article className={`project-card ${className}`.trim()}>
@@ -26,7 +26,7 @@ function ProjectCard({ project, className = '' }: ProjectCardProps) {
           <h4>{project.title}</h4>
           <p>{project.description}</p>
           <div className="tag-list">
-            {project.tags.map((tag) => (
+            {project.skills.map((tag) => (
               <span key={tag} className="tag-chip">
                 {tag}
               </span>

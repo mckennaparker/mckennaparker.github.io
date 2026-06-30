@@ -1,5 +1,5 @@
 .blog-content {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@
 .hero-image,
 .section-image {
     min-width: 300px;
-    max-width: 1400px;
+    max-width: 1000px;
     width: 100%;
     border-radius: 16px;
     margin: 0 auto;
