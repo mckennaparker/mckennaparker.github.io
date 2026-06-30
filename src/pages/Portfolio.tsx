@@ -7,19 +7,9 @@ import ProjectCard from '../components/ProjectCard.tsx';
 import './Portfolio.css';
 import { projects } from '../data/projects.ts';
 import { Outlet } from 'react-router'
+import type { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from 'react';
 
 const SlickSlider = ((Slider as unknown as { default?: typeof Slider }).default ?? Slider) as typeof Slider;
-
-function CustomArrow(props: any) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", caretColor: "red" }}
-            onClick={onClick}
-        />
-    )
-}
 
 function Portfolio() {
     const graphicsProjects = projects.filter((project) => project.type === 'graphics' || !project.type);
@@ -33,7 +23,7 @@ function Portfolio() {
         slidesToScroll: 1,
         arrows: false,
         autoPlay: true,
-        appendDots: dots => (
+        appendDots: (dots: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined) => (
             <div
                 style={{
                     borderRadius: "10px",
