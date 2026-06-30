@@ -15,9 +15,17 @@ function HoudiniLearningLogFoundationsWelcome() {
                         <p>By McKenna Parker</p>
                     </div>
                 </div>
-                <video className="hero-image" controls>
-                    <source src="../blogs/houdiniLearningLog.mp4" type="video/mp4" />
-                </video>
+                <div className="blog-video">
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        width="100%"
+                        height="auto">
+                        <source src="../blogs/gumballs.mp4" type="video/mp4" />
+                    </video>
+                </div>
                 <div className="blog-sections">
                     <div className="blog-section">
                         <h3>Introduction</h3>
@@ -253,9 +261,19 @@ function HoudiniLearningLogFoundationsWelcome() {
                         <img className="section-image" src="../blogs/groundTexture.png" alt="" />
                         <div className="blog-subsection">
                             <h4>Process</h4>
-                            <p>...</p>
+                            <p>The ground texturing is also done in the Solaris environment by adding a COP network to the ground material and adjusting the color, specular, and nprmal maps.</p>
                             <ol>
-                                <li>Use a UV Texture node to create UVs for the ground plane, setting the Texture Type to "Rows and Columns" and the number of rows and columns to 10.</li>
+                                <li>Change the color of the ground Material node back to white.</li>
+                                <li>Create a Color Map and then create a COP network.</li>
+                                <li>Pin the scene view and then double click into the COP network.</li>
+                                <li>Split the view left and right and add a Composite View in the right pane to see a 2D view of the texture.</li>
+                                <li>Delete the UV Grid node and then add a Tile Pattern node, make it a French pattern, and route it into the first input of the base color.</li>
+                                <li>Change the color by adding a Constant node, routing the constant output and the tiles output from the Tile Pattern node into a Multiply node, and then routing the blend output into the Base Color node input.</li>
+                                <li>Change the UV scale under the Ground Material node to a higher resolution like ten by ten.</li>
+                                <li>Create a Specular Color Map and Bump Normal Map and then delete the default pattern nodes that appear.</li>
+                                <li>Route the tiles output of the Pattern node into the first input of the Specular Color node and Blur node.</li>
+                                <li>Adjust thickness using the Divisions parameter under the Tile Pattern node.</li>
+                                <li>If the ground texture does not update right away, click the Karma XPU Persp dropdown and select "Restart Render" to update it.</li>
                             </ol>
                         </div>
                         <div className="blog-subsection">
@@ -289,6 +307,10 @@ function HoudiniLearningLogFoundationsWelcome() {
                         <img className="section-image" src="../blogs/gumballRender.png" alt="" />
                         <div className="blog-subsection">
                             <h4>Process</h4>
+                            <p></p>
+                            <ol>
+                                <li></li>
+                            </ol>
                         </div>
                     </div>
                     <div className="blog-section">

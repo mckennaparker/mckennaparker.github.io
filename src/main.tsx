@@ -13,8 +13,8 @@ import Portfolio from './pages/Portfolio.tsx'
 import BehavioralAnimation from './pages/projects/BehavioralAnimation.tsx'
 
 // Blog Imports
-import HoudiniLearningLogFoundationsWelcome from './pages/blogs/HoudiniLearningLogFoundationsWelcome.tsx'
-import HoudiniLearningLogFoundationsVFX from './pages/blogs/HoudiniLearningLogFoundationsVFX.tsx'
+import HoudiniLearningLogFoundationsWelcome from './pages/blogposts/HoudiniLearningLogFoundationsWelcome.tsx'
+import HoudiniLearningLogFoundationsVFX from './pages/blogposts/HoudiniLearningLogFoundationsVFX.tsx'
 
 
 createRoot(document.getElementById('root')!).render(

@@ -21,7 +21,12 @@
     border-radius: 50%;
 }
 
-.hero-image,
+.blog-video {
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+}
+
 .section-image {
     min-width: 300px;
     max-width: 1000px;
@@ -116,11 +121,6 @@ td {
 
     h4 {
         font-size: 24px;
-    }
-
-    .right-column {
-        visibility: hidden;
-        position: absolute;
     }
 
     .middle-column {
