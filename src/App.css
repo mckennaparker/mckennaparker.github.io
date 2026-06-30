@@ -92,14 +92,23 @@ p {
 }
 
 @media screen and (width <=728px) {
+  .nav {
+    padding: 8px;
+    justify-content: space-between;
+  }
+
   #nav-links {
     position: absolute;
     top: 64px;
     right: 0;
-    width: 100px;
-    display: hidden;
+    width: 164px;
+    display: none;
     flex-direction: column;
     background-color: #091B2F;
+  }
+
+  #nav-links.menu-open {
+    display: flex;
   }
 
   #nav-links a {

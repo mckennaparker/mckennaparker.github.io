@@ -4,8 +4,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 function onClick() {
     var links = document.getElementById("nav-links");
-    var currentDisplay = links?.style.display || "none";
-    links!.style.display = currentDisplay === "flex" ? "none" : "flex";
+    links?.classList.toggle("menu-open");
 }
 
 function Nav() {
@@ -20,7 +19,7 @@ function Nav() {
                     <NavLink to="/resume" className={({ isActive }) => isActive ? "active last-link" : "last-link"} onClick={onClick}><p>Resume</p></NavLink>
                 </div>
                 <div className="menu">
-                    <button onClick={onClick} aria-label="Toggle menu" style={{ background: "none", border: "none", cursor: "pointer", color: "inherit" }}>
+                    <button onClick={onClick} aria-label="Toggle menu" style={{ background: "none", border: "none", padding: "0", cursor: "pointer", color: "inherit" }}>
                         <FontAwesomeIcon icon={faBars} size="2x" />
                     </button>
                 </div>
