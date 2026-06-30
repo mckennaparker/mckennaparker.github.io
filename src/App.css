@@ -96,8 +96,8 @@ p {
     position: absolute;
     top: 64px;
     right: 0;
-    width: 25%;
-    display: flex;
+    width: 100px;
+    display: hidden;
     flex-direction: column;
     background-color: #091B2F;
   }
