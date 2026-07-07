@@ -7,7 +7,7 @@ function HoudiniLearningLogFoundationsWelcome() {
             <div className="blog-content content">
                 <div className="blog-header">
                     <div className="meta-info">
-                        <p>June 6, 2026 · 5 min read</p>
+                        <p>June 8, 2026 · 5 min read</p>
                     </div>
                     <h1>Houdini Learning Log: Foundations Welcome Course</h1>
                     <div className="author-info">
@@ -307,19 +307,50 @@ function HoudiniLearningLogFoundationsWelcome() {
                         <img className="section-image" src="../blogs/gumballRender.png" alt="" />
                         <div className="blog-subsection">
                             <h4>Process</h4>
-                            <p></p>
+                            <p>Rendering the gumballs is done by exporting a USD file of the gumballs, referencing it in the stage network, applying materials, and then rendering using the Karma Render node setup.</p>
                             <ol>
-                                <li></li>
+                                <li>Leave the Stage View and go back to the Object View to export the gumball animation using the USD File Export node.</li>
+                                <li>Go back to the Stage View and add a Reference node that refers to the USD render that was saved.</li>
+                                <li>Connect the output of the Reference node to the geometry Merge node.</li>
+                                <li>Ensure the gumballs are in the geo category by making the Reference node's Primitive Path /geo/'@sourcename'.</li>
+                                <li>Copy the cup's Material node and create the gumball Material node with a metalness of 0.8 and a roughness of 0.5.</li>
+                                <li>Use the Material Linker to assign the gumball Material node to the gumball geometry.</li>
+                                <li>Add a Light Mixer node after the second Point Light node in order to adjust the lighting more easily.</li>
+                                <li>Add a Karma (Setup) node to configure the render settings for the scene. In my render I used XPU Paramaters and turned on denoising.</li>
+                                <li>In the Render ROP node, use Render Specific Frame Range and then Render to Disk.</li>
+                                <li>To see the render, go to Render &gt; MPlay &gt; Load Disk Files.</li>
                             </ol>
                         </div>
                     </div>
                     <div className="blog-section">
                         <h3>Last Minute Changes</h3>
-                        <div className="blog-subsection">
-                            <h4>Process</h4>
+                        <div className="blog-video">
+                            <video
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                width="100%"
+                                height="auto">
+                                <source src="../blogs/eggs.mp4" type="video/mp4" />
+                            </video>
                         </div>
                         <div className="blog-subsection">
-                            <h4>Hotkeys & Shortcuts</h4>
+                            <h4>Process</h4>
+                            <p>While not necessary, this section shows how a user can easily update their work if a client were to request changes in the model and render.</p>
+                            <ol>
+                                <li>At the object context, go into the cup node and change the Switch node so that the cup is the orange one that we created alongside the red one.</li>
+                                <li>Access the Sphere node and using Point Select, select just the top vertex and move it straight up.</li>
+                                <li>A "rad" slider will appear in the bottom left corner, so adjust that to about 0.35 to get an egg shape.</li>
+                                <li>In the File Cache node, change the Base Name to eggs and then Save to Disk.</li>
+                                <li>Update the length of the animation in Global Animation Options to be 120 frames.</li>
+                                <li>In the USD Export node, update the file name to eggs and Save to Disk.</li>
+                                <li>In the stage context, add a Reference node to the eggs USD file between the Light Mixer and the Karma Render Settings.</li>
+                                <li>Make the Reference Node's Primitive Path "/geo/gumballs" to replace the gumballs with the eggs instead of having both in the scene.</li>
+                                <li>Right click on the Slap Comps button, create a New Filter List, and add filters to it as desired.</li>
+                                <li>Update the render settings so that it the output file is named eggs instead of gumballs.</li>
+                                <li>In the Render ROP node, under Slap Comp make the Source the COP Filter List with the desired filters.</li>
+                            </ol>
                         </div>
                     </div>
                 </div>

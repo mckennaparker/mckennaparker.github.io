@@ -13,8 +13,7 @@ function BlogCard({ blog, className = '' }: BlogCardProps) {
             <NavLink className="blog-card-link" to={blog.url}>
                 <div className="blog-card-body">
                     <div className="blog-card-meta">
-                        <span>{formatDisplayDate(blog.date)}</span>
-                        <span>{blog.author}</span>
+                        <span>{formatDisplayDate(blog.date)}  ·  {blog.author}</span>
                     </div>
                     <h2>{blog.title}</h2>
                     <p>{blog.snippet}</p>
