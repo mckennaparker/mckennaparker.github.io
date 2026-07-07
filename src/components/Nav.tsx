@@ -11,7 +11,7 @@ function Nav() {
     return (
         <div>
             <nav className="nav">
-                <h3>McKenna Parker</h3>
+                <NavLink to="/" className="logo-link"><h3>McKenna Parker</h3></NavLink>
                 <div id="nav-links">
                     <NavLink to="/" end className={({ isActive }) => isActive ? "active first-link" : "first-link"} onClick={onClick}><p>About</p></NavLink>
                     <NavLink to="/portfolio" className={({ isActive }) => isActive ? "active middle-link" : "middle-link"} onClick={onClick}><p>Portfolio</p></NavLink>

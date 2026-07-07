@@ -57,6 +57,11 @@ p {
   z-index: 1000;
 }
 
+.logo-link {
+  color: #091B2F;
+  text-decoration: none;
+}
+
 #nav-links {
   display: flex;
   gap: 24px;
