@@ -1,7 +1,7 @@
+import { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
 import Footer from '../components/Footer.tsx';
 import ProjectCard from '../components/ProjectCard.tsx';
 import './Portfolio.css';
@@ -12,17 +12,34 @@ import type { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from
 const SlickSlider = ((Slider as unknown as { default?: typeof Slider }).default ?? Slider) as typeof Slider;
 
 function Portfolio() {
+    const [slidesToShow, setSlidesToShow] = useState(() => {
+        if (typeof window === 'undefined') {
+            return 3;
+        }
+
+        return window.innerWidth <= 776 ? 1 : window.innerWidth <= 1136 ? 2 : 3;
+    });
+
+    useEffect(() => {
+        const handleResize = () => {
+            setSlidesToShow(window.innerWidth <= 776 ? 1 : window.innerWidth <= 1136 ? 2 : 3);
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     const graphicsProjects = projects.filter((project) => project.type === 'graphics' || !project.type);
     const uxUiProjects = projects.filter((project) => project.type === 'web' || project.type === 'AI/ML');
 
     const settings = {
         dots: true,
         infinite: false,
-        speed: 500,
-        slidesToShow: 3,
+        slidesToShow: slidesToShow,
         slidesToScroll: 1,
         arrows: false,
-        autoPlay: true,
         appendDots: (dots: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined) => (
             <div
                 style={{

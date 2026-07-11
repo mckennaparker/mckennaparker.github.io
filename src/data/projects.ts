@@ -18,7 +18,7 @@ const projectData: Project[] = [
     {
         id: 20,
         title: 'Ultifilm',
-        description: 'A web application to watch, notate, and implement plays in ultimate frisbee.',
+        description: 'A web application to watch, annotate, and implement plays in ultimate frisbee.',
         thumbnail: '/projects/ultifilm.png',
         link: '/portfolio/ultifilm',
         tags: ['React', 'TypeScript', 'Web Development'],
