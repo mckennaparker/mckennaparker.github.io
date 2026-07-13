@@ -1,8 +1,27 @@
+import './ProjectPage.css'
+import Footer from '../../components/Footer'
+
 function MonteCarloPathTracer() {
     return (
         <div className="project-page">
-            <h1>Monte Carlo Path Tracer</h1>
-            <p>This page is a work in progress.</p>
+            <div className="project-content content">
+                <div className="project-header">
+                    <div className="project-info">
+                        <h1>Monte Carlo Path Tracer</h1>
+                        <p>Description coming soon...</p>
+                    </div>
+                    <div className="project-img">
+                        <img className="project-hero-img" src="../projects/pathTracer.png" />
+                    </div>
+                </div>
+                <div className="">
+                    <h3>Process</h3>
+                    <ol>
+                        <li>Custom Ray-Tracing Engine</li>
+                    </ol>
+                </div>
+            </div>
+            <Footer />
         </div>
     );
 };

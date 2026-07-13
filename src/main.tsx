@@ -9,8 +9,14 @@ import App from './App.tsx'
 import Blog from './pages/Blog.tsx'
 import Portfolio from './pages/Portfolio.tsx'
 
-// Project Imports
+// Graphics Project Imports
 import BehavioralAnimation from './pages/projects/BehavioralAnimation.tsx'
+import PhysicallyBasedRenderer from './pages/projects/PhysicallyBasedRenderer.tsx'
+import MonteCarloPathTracer from './pages/projects/MonteCarloPathTracer.tsx'
+
+// UX/UI Project Imports
+import Ultifilm from './pages/projects/Ultifilm.tsx'
+import YoungChef from './pages/projects/YoungChef.tsx'
 
 // Blog Imports
 import HoudiniLearningLogFoundationsWelcome from './pages/blogposts/HoudiniLearningLogFoundationsWelcome.tsx'
@@ -26,6 +32,10 @@ createRoot(document.getElementById('root')!).render(
           <Route path="portfolio">
             <Route index element={<Portfolio />} />
             <Route path="behavioral-animation" element={<BehavioralAnimation />} />
+            <Route path="physically-based-renderer" element={<PhysicallyBasedRenderer />} />
+            <Route path="monte-carlo-path-tracer" element={<MonteCarloPathTracer />} />
+            <Route path="ultifilm" element={<Ultifilm />} />
+            <Route path="young-chef" element={<YoungChef />} />
           </Route>
           <Route path="blog">
             <Route index element={<Blog />} />
