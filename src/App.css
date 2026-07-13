@@ -156,7 +156,6 @@ p {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  /* background-color: purple; */
 }
 
 .content h3 {
@@ -169,7 +168,6 @@ p {
   flex-direction: row;
   gap: 24px;
   justify-content: space-between;
-  /* background-color: pink; */
 }
 
 .about>* {
@@ -178,7 +176,6 @@ p {
 }
 
 .about-img {
-  /* background-color: lightblue; */
   display: flex;
   flex-direction: row;
   gap: 24px;
@@ -191,7 +188,6 @@ p {
   display: block;
   border-radius: 8px;
   object-fit: cover;
-  /* background-color: green; */
 }
 
 .about-info h2 {
@@ -208,7 +204,6 @@ p {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  /* background-color: lightcoral; */
 }
 
 .project-list {
@@ -221,7 +216,6 @@ p {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  /* background-color: lightcoral; */
 }
 
 .blog-list-about {
