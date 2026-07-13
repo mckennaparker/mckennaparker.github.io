@@ -16,7 +16,7 @@ export interface Project {
 
 const projectData: Project[] = [
     {
-        id: 20,
+        id: 19,
         title: 'Ultifilm',
         description: 'A web application to watch, annotate, and implement plays in ultimate frisbee.',
         thumbnail: '/projects/ultifilm.png',
@@ -29,11 +29,11 @@ const projectData: Project[] = [
         type: 'web',
     },
     {
-        id: 19,
+        id: 18,
         title: 'Young Chef',
         description: 'A mobile app to help college students learn to cook on a budget',
         thumbnail: '/projects/youngChef.gif',
-        link: '/young-chef',
+        link: '/portfolio/young-chef',
         tags: ['Figma', 'UX/UI', 'Mobile App'],
         date: 'May 2026',
         skills: ['Figma', 'UX/UI', 'Mobile App Design', 'Human-Computer Interaction'],
@@ -42,9 +42,9 @@ const projectData: Project[] = [
         type: 'web',
     },
     {
-        id: 18,
-        title: 'Physically-Based Renderer',
-        description: 'A physiically-based renderer implemented in C++ and GLSL',
+        id: 17,
+        title: 'Physically Based Real-time Renderer',
+        description: 'A physically-based renderer implemented in C++ and GLSL',
         thumbnail: '/projects/pbr.png',
         link: '/portfolio/physically-based-renderer',
         tags: ['C++', 'Graphics', 'Rendering'],
@@ -55,7 +55,7 @@ const projectData: Project[] = [
         type: 'graphics',
     },
     {
-        id: 17,
+        id: 16,
         title: 'Monte Carlo Path Tracer',
         description: 'A Monte Carlo Path Tracer implemented in C++ and GLSL',
         thumbnail: '/projects/pathTracer.png',
@@ -68,7 +68,7 @@ const projectData: Project[] = [
         type: 'graphics',
     },
     {
-        id: 16,
+        id: 15,
         title: 'Path@Penn Redesign',
         description: 'A redesign of the Path@Penn website to improve usability and accessibility.',
         thumbnail: '/projects/pathAtPennRedesign.png',
@@ -81,7 +81,7 @@ const projectData: Project[] = [
         type: 'web',
     },
     {
-        id: 15,
+        id: 14,
         title: 'Behavioral Animation Simulation',
         description: 'A simulation showcasing behavioral animation techniques coded in C++',
         thumbnail: '/projects/behavioralAnimation.png',
@@ -95,7 +95,7 @@ const projectData: Project[] = [
 
     },
     {
-        id: 14,
+        id: 13,
         title: 'Procedural Winter Village',
         description: 'A procedurally generated winter village created using Blender geometry nodes',
         thumbnail: '/projects/winterVillage.png',
@@ -108,7 +108,7 @@ const projectData: Project[] = [
         type: 'graphics',
     },
     {
-        id: 13,
+        id: 12,
         title: 'Particle System Fireworks',
         description: 'A programmed particle system that simulates fireworks coded in C++',
         thumbnail: '/projects/particleSystemFireworks.png',
@@ -121,7 +121,7 @@ const projectData: Project[] = [
         type: 'graphics',
     },
     {
-        id: 12,
+        id: 11,
         title: 'Keyframe Walk Cycle Animation',
         description: 'A human walk cycle animation created using keyframing in Autodesk MotionBuilder',
         thumbnail: '/projects/walkCycleAnimation.png',
@@ -134,7 +134,7 @@ const projectData: Project[] = [
         type: 'graphics',
     },
     {
-        id: 11,
+        id: 10,
         title: 'Stylized Unity Shaders',
         description: 'Collection of Stylized Shaders for Unity',
         thumbnail: './projects/toonShaderShadows.png',
@@ -147,7 +147,7 @@ const projectData: Project[] = [
         type: 'graphics',
     },
     {
-        id: 10,
+        id: 9,
         title: 'Procedural Fireball',
         description: 'Procedurally Generated Fireball in OpenGL',
         thumbnail: './projects/fireball.png',
@@ -160,7 +160,7 @@ const projectData: Project[] = [
         type: 'graphics',
     },
     {
-        id: 9,
+        id: 8,
         title: 'Procedural Planet',
         description: 'Procedurally Generated Planet in OpenGL',
         thumbnail: './projects/planet.png',
@@ -173,7 +173,7 @@ const projectData: Project[] = [
         type: 'graphics',
     },
     {
-        id: 8,
+        id: 7,
         title: 'Mini Minecraft',
         description: 'Multithreaded Voxel Game Engine',
         thumbnail: './projects/miniMinecraft.png',
@@ -186,7 +186,7 @@ const projectData: Project[] = [
         type: 'graphics',
     },
     {
-        id: 7,
+        id: 6,
         title: 'Half Edge Mesh Editor',
         description: '3D Model Editing Software',
         thumbnail: './projects/miniMaya.png',
@@ -199,25 +199,12 @@ const projectData: Project[] = [
         type: 'graphics',
     },
     {
-        id: 6,
+        id: 5,
         title: 'Surface and Post Shaders',
         description: 'Collection of GLSL Surface and Post Shaders',
         thumbnail: './projects/blinnPhongHW05.png',
         link: '/projects/surface-and-post-shaders',
         tags: ['shader', 'post', 'processing', 'C++', 'OpenGL'],
-        date: 'February 2025',
-        skills: ['C++', 'OpenGL', 'GLSL', 'Git', 'Qt'],
-        repo: '',
-        live: '',
-        type: 'graphics',
-    },
-    {
-        id: 5,
-        title: 'OpenGL Animation',
-        description: 'OpenGL Animation with Keyframe Interpolation',
-        thumbnail: './projects/animationHW04.png',
-        link: '/projects/opengl-animation',
-        tags: ['animation', 'OpenGL', 'C++', 'GLSL'],
         date: 'February 2025',
         skills: ['C++', 'OpenGL', 'GLSL', 'Git', 'Qt'],
         repo: '',
