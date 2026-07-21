@@ -151,7 +151,7 @@ p {
 
 .content {
   max-width: 1400px;
-  width: 85%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -206,10 +206,104 @@ p {
   gap: 24px;
 }
 
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #091B2F;
+}
+
+.slick-dots li {
+  margin: 2px !important;
+}
+
+.slick-dots li button:before {
+  color: #A9AAF4;
+  font-size: 16px;
+  opacity: 1;
+}
+
+.slick-active button:before {
+  color: #0B0C72 !important;
+  opacity: 1;
+}
+
 .project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 16px;
+  padding-bottom: 24px;
+  margin: 0;
+}
+
+.slick-track::before,
+.slick-track::after {
+  display: none !important;
+}
+
+.project-list .slick-track {
+  display: flex !important;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  padding-right: 1px;
+}
+
+.project-list .slick-slide {
+  height: auto;
+}
+
+.project-list .slick-slide>div {
+  height: 100%;
+  width: 100%;
+}
+
+.project-list .slick-dots {
+  position: static !important;
+  margin-top: 10px !important;
+}
+
+.project-card-about {
+  color: #091B2F;
+  max-width: 600px;
+  height: 100%;
+  display: flex;
+}
+
+.project-card-about .project-card-link {
+  height: 100%;
+}
+
+.project-card-about .project-card-body {
+  flex: 1 1 auto;
+}
+
+.btn {
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #A9AAF4;
+  color: #091B2F;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #091B2F;
+  color: #A9AAF4;
+}
+
+.projects>.btn-primary {
+  width: 200px;
 }
 
 .blogs {
@@ -222,7 +316,7 @@ p {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 20px;
 }
 
 .project-card {
@@ -231,7 +325,7 @@ p {
   flex: 1 1 0;
   border-radius: 16px;
   padding: 16px;
-  border: 2px solid #8FB8D8;
+  border: 2px solid #8FB8D8 inside;
   background: #FAFAFA;
 }
 
