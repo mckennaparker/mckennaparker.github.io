@@ -17,12 +17,12 @@ function Portfolio() {
             return 3;
         }
 
-        return window.innerWidth <= 776 ? 1 : window.innerWidth <= 1136 ? 2 : 3;
+        return window.innerWidth <= 800 ? 1 : window.innerWidth <= 1200 ? 2 : 3;
     });
 
     useEffect(() => {
         const handleResize = () => {
-            setSlidesToShow(window.innerWidth <= 776 ? 1 : window.innerWidth <= 1136 ? 2 : 3);
+            setSlidesToShow(window.innerWidth <= 800 ? 1 : window.innerWidth <= 1200 ? 2 : 3);
         };
 
         handleResize();
@@ -33,6 +33,7 @@ function Portfolio() {
 
     const graphicsProjects = projects.filter((project) => project.type === 'graphics' || !project.type);
     const uxUiProjects = projects.filter((project) => project.type === 'web' || project.type === 'AI/ML');
+    const artProjects = projects.filter((project) => project.type === 'art');
 
     const settings = {
         dots: true,
@@ -78,6 +79,16 @@ function Portfolio() {
                         </div>
                         <SlickSlider {...settings} className="portfolio-slider">
                             {uxUiProjects.map((project) => (
+                                <ProjectCard key={project.id} className="project-card-portfolio" project={project} />
+                            ))}
+                        </SlickSlider>
+                    </div>
+                    <div className="project-section">
+                        <div className="section-text">
+
+                        </div>
+                        <SlickSlider>
+                            {artProjects.map((project) => (
                                 <ProjectCard key={project.id} className="project-card-portfolio" project={project} />
                             ))}
                         </SlickSlider>

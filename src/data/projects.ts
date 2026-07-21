@@ -16,6 +16,19 @@ export interface Project {
 
 const projectData: Project[] = [
     {
+        id: 20,
+        title: 'Gumball Simulation',
+        description: 'A gumball physics simulation modeled, simulated, and rendered in Houdini',
+        thumbnail: '/blogs/foundationsWelcome.png',
+        link: '/portfolio/gumball-simulation',
+        tags: ['Houdini', 'Copernicus', 'Solaris', 'Procedural', 'Physics', 'USD'],
+        date: 'June 2026',
+        skills: ['Houdini', 'Copernicus', 'Solaris', 'USD'],
+        repo: '',
+        live: '',
+        type: 'art'
+    },
+    {
         id: 19,
         title: 'Ultifilm',
         description: 'A web application to watch, annotate, and implement plays in ultimate frisbee.',

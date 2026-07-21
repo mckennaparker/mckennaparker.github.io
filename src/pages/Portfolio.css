@@ -8,7 +8,7 @@
 }
 
 .portfolio-content {
-  width: 85%;
+  width: 80%;
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
@@ -61,6 +61,8 @@
 .project-card-portfolio {
   color: #091B2F;
   margin: 20px;
+  height: auto;
+  max-width: 600px;
 }
 
 .footer {
