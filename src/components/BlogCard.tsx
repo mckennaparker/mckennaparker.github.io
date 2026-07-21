@@ -24,7 +24,6 @@ function BlogCard({ blog, className = '' }: BlogCardProps) {
                             </span>
                         ))}
                     </div>
-                    <span className="card-cta">Read More</span>
                 </div>
             </NavLink>
         </article>

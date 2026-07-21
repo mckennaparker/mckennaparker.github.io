@@ -32,7 +32,6 @@ function ProjectCard({ project, className = '' }: ProjectCardProps) {
               </span>
             ))}
           </div>
-          <span className="card-cta">View Project</span>
         </div>
       </NavLink>
     </article>
