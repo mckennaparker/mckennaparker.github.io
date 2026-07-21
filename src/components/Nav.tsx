@@ -1,6 +1,7 @@
-import { Outlet, NavLink } from 'react-router'
+import { Outlet, NavLink, useLocation } from 'react-router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { useEffect } from 'react'
 
 function onClick() {
     var links = document.getElementById("nav-links");
@@ -8,6 +9,12 @@ function onClick() {
 }
 
 function Nav() {
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0 });
+    }, [location.pathname]);
+
     return (
         <div>
             <nav className="nav">
