@@ -8,6 +8,7 @@ import Nav from './components/Nav.tsx'
 import App from './App.tsx'
 import Blog from './pages/Blog.tsx'
 import Portfolio from './pages/Portfolio.tsx'
+import Resume from './pages/Resume.tsx'
 
 // Graphics Project Imports
 import BehavioralAnimation from './pages/projects/BehavioralAnimation.tsx'
@@ -43,7 +44,7 @@ createRoot(document.getElementById('root')!).render(
             <Route path="houdini-learning-log-foundations-vfx" element={<HoudiniLearningLogFoundationsVFX />} />
           </Route>
 
-          <Route path="resume" element={<div><h1>Resume</h1></div>} />
+          <Route path="resume" element={<Resume />} />
         </Route>
       </Routes>
     </HashRouter>
