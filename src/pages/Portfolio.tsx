@@ -33,7 +33,7 @@ function Portfolio() {
 
     const graphicsProjects = projects.filter((project) => project.type === 'graphics' || !project.type);
     const uxUiProjects = projects.filter((project) => project.type === 'web' || project.type === 'AI/ML');
-    const artProjects = projects.filter((project) => project.type === 'art');
+    const techArtProjects = projects.filter((project) => project.type === 'techart');
 
     const settings = {
         dots: true,
@@ -57,7 +57,7 @@ function Portfolio() {
         <div className="portfolio">
             <div className="portfolio-content">
                 <div className="project-sections">
-                    <div className="project-section">
+                    <div id="graphics" className="project-section">
                         <div className="section-text">
                             <h2>Graphics Projects</h2>
                             <h4 className="portfolio-intro">
@@ -70,25 +70,26 @@ function Portfolio() {
                             ))}
                         </SlickSlider>
                     </div>
-                    <div className="project-section">
+                    <div id="tech-art" className="project-section">
                         <div className="section-text">
-                            <h2>UX/UI Projects</h2>
+                            <h2>Tech Art Projects</h2>
+                            <p>A selection of recent projects across tech art domains such as procedural and 3D modeling.</p>
+                        </div>
+                        <SlickSlider {...settings} className="portfolio-slider">
+                            {techArtProjects.map((project) => (
+                                <ProjectCard key={project.id} className="project-card-portfolio" project={project} />
+                            ))}
+                        </SlickSlider>
+                    </div>
+                    <div id="ui-ux" className="project-section">
+                        <div className="section-text">
+                            <h2>UI/UX Projects</h2>
                             <h4 className="portfolio-intro">
                                 A selection of recent projects across user interface design, human-computer interaction, and web development.
                             </h4>
                         </div>
                         <SlickSlider {...settings} className="portfolio-slider">
                             {uxUiProjects.map((project) => (
-                                <ProjectCard key={project.id} className="project-card-portfolio" project={project} />
-                            ))}
-                        </SlickSlider>
-                    </div>
-                    <div className="project-section">
-                        <div className="section-text">
-
-                        </div>
-                        <SlickSlider>
-                            {artProjects.map((project) => (
                                 <ProjectCard key={project.id} className="project-card-portfolio" project={project} />
                             ))}
                         </SlickSlider>

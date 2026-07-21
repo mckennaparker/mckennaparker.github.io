@@ -58,11 +58,54 @@
   opacity: 1;
 }
 
+.portfolio-slider {
+  padding-bottom: 24px;
+}
+
+.portfolio-slider .slick-list {
+  display: flex;
+  padding: 8px 0;
+}
+
+.portfolio-slider .slick-track::before,
+.portfolio-slider .slick-track::after {
+  display: none !important;
+}
+
+.portfolio-slider .slick-track {
+  display: flex !important;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.portfolio-slider .slick-slide {
+  height: auto;
+}
+
+.portfolio-slider .slick-slide>div {
+  height: 97%;
+  min-height: fit-content;
+}
+
+.portfolio-slider .slick-dots {
+  position: static !important;
+  margin-top: 10px !important;
+}
+
 .project-card-portfolio {
   color: #091B2F;
-  margin: 20px;
-  height: auto;
+  margin: 0px;
   max-width: 600px;
+  height: 100%;
+  display: flex;
+}
+
+.project-card-portfolio .project-card-link {
+  height: 100%;
+}
+
+.project-card-portfolio .project-card-body {
+  flex: 1 1 auto;
 }
 
 .footer {
