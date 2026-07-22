@@ -165,6 +165,7 @@ p {
   flex-direction: row;
   gap: 24px;
   justify-content: space-between;
+  margin-bottom: 24px;
 }
 
 .about>* {
@@ -201,6 +202,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  margin-bottom: 24px;
 }
 
 .projects-header {
@@ -312,6 +314,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  margin-bottom: 24px;
 }
 
 .blog-list-about {
