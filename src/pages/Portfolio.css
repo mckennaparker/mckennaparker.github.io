@@ -1,10 +1,35 @@
 .portfolio {
   width: 100%;
-  gap: 48px;
-  display: flex;
-  flex-direction: column;
   margin: 0;
   padding: 0;
+}
+
+.portfolio-nav {
+  width: fit-content;
+  height: 70.1vh;
+  position: fixed;
+  top: 130px;
+  right: 24px;
+  overflow: auto;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.portfolio-link {
+  text-decoration: none;
+  color: #091B2F;
+}
+
+.portfolio-link:hover {
+  color: #163D64;
+}
+
+@media screen and (width <=1000px) {
+  .portfolio-link>p {
+    font-size: 14px;
+  }
 }
 
 .portfolio-content {

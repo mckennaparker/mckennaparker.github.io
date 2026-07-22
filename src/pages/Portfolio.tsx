@@ -6,12 +6,13 @@ import Footer from '../components/Footer.tsx';
 import ProjectCard from '../components/ProjectCard.tsx';
 import './Portfolio.css';
 import { projects } from '../data/projects.ts';
-import { Outlet } from 'react-router'
+import { Link, Outlet, useLocation } from 'react-router'
 import type { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from 'react';
 
 const SlickSlider = ((Slider as unknown as { default?: typeof Slider }).default ?? Slider) as typeof Slider;
 
 function Portfolio() {
+    const location = useLocation();
     const [slidesToShow, setSlidesToShow] = useState(() => {
         if (typeof window === 'undefined') {
             return 3;
@@ -30,6 +31,22 @@ function Portfolio() {
 
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    useEffect(() => {
+        if (!location.hash) {
+            return;
+        }
+
+        const sectionId = location.hash.replace('#', '');
+        const section = document.getElementById(sectionId);
+
+        if (section) {
+            const yOffset = sectionId === "ui-ux" ? -96 : -120;
+
+            const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+    }, [location.pathname, location.hash]);
 
     const graphicsProjects = projects.filter((project) => project.type === 'graphics' || !project.type);
     const uxUiProjects = projects.filter((project) => project.type === 'web' || project.type === 'AI/ML');
@@ -56,6 +73,12 @@ function Portfolio() {
     return (
         <div className="portfolio">
             <div className="portfolio-content">
+                <div className="portfolio-nav">
+                    <Link className="portfolio-link" to={{ pathname: '/portfolio', hash: '#graphics' }}><p>Graphics</p></Link>
+                    <Link className="portfolio-link" to={{ pathname: '/portfolio', hash: '#games' }}><p>Games</p></Link>
+                    <Link className="portfolio-link" to={{ pathname: '/portfolio', hash: '#tech-art' }}><p>Tech Art</p></Link>
+                    <Link className="portfolio-link" to={{ pathname: '/portfolio', hash: '#ui-ux' }}><p>UI/UX</p></Link>
+                </div>
                 <div className="project-sections">
                     <div id="graphics" className="project-section">
                         <div className="section-text">
@@ -73,7 +96,7 @@ function Portfolio() {
                     <div id="tech-art" className="project-section">
                         <div className="section-text">
                             <h2>Tech Art Projects</h2>
-                            <p>A selection of recent projects across tech art domains such as procedural and 3D modeling.</p>
+                            <h4 className="portfolio-intro">A selection of recent projects across tech art domains such as procedural and 3D modeling.</h4>
                         </div>
                         <SlickSlider {...settings} className="portfolio-slider">
                             {techArtProjects.map((project) => (
