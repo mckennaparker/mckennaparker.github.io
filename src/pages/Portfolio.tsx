@@ -41,7 +41,7 @@ function Portfolio() {
         const section = document.getElementById(sectionId);
 
         if (section) {
-            const yOffset = sectionId === "ui-ux" ? -96 : -120;
+            const yOffset = sectionId === "ui-ux" ? -84 : -120;
 
             const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
             window.scrollTo({ top: y, behavior: 'smooth' });
@@ -49,8 +49,9 @@ function Portfolio() {
     }, [location.pathname, location.hash]);
 
     const graphicsProjects = projects.filter((project) => project.type === 'graphics' || !project.type);
-    const uxUiProjects = projects.filter((project) => project.type === 'web' || project.type === 'AI/ML');
+    const gamesProjects = projects.filter((project) => project.type === 'games');
     const techArtProjects = projects.filter((project) => project.type === 'techart');
+    const uxUiProjects = projects.filter((project) => project.type === 'web' || project.type === 'AI/ML');
 
     const settings = {
         dots: true,
@@ -89,6 +90,19 @@ function Portfolio() {
                         </div>
                         <SlickSlider {...settings} className="portfolio-slider">
                             {graphicsProjects.map((project) => (
+                                <ProjectCard key={project.id} className="project-card-portfolio" project={project} />
+                            ))}
+                        </SlickSlider>
+                    </div>
+                    <div id="games" className="project-section">
+                        <div className="section-text">
+                            <h2>Game Development Projects</h2>
+                            <h4 className="portfolio-intro">
+                                A selection of recent projects across different game development domains such as programming and design.
+                            </h4>
+                        </div>
+                        <SlickSlider {...settings} className="portfolio-slider">
+                            {gamesProjects.map((project) => (
                                 <ProjectCard key={project.id} className="project-card-portfolio" project={project} />
                             ))}
                         </SlickSlider>

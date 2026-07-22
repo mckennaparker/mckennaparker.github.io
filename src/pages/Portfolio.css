@@ -8,7 +8,7 @@
   width: fit-content;
   height: 70.1vh;
   position: fixed;
-  top: 130px;
+  top: 116px;
   right: 24px;
   overflow: auto;
   text-align: right;
@@ -39,6 +39,7 @@
   display: flex;
   flex-direction: column;
   gap: 48px;
+  margin-bottom: 48px;
 }
 
 .project-sections {
@@ -92,8 +93,8 @@
   padding: 8px 0;
 }
 
-.portfolio-slider .slick-track::before,
-.portfolio-slider .slick-track::after {
+.portfolio-slider>.slick-track::before,
+.portfolio-slider>.slick-track::after {
   display: none !important;
 }
 
