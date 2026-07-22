@@ -52,7 +52,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 48px;
+  padding: 0 24px;
   margin-bottom: 48px;
   z-index: 1000;
 }
@@ -472,5 +472,11 @@ p {
 
   .about>* {
     flex: 0 0 auto;
+  }
+
+  .about-img-main {
+    max-width: 720px;
+    width: 100%;
+    align-items: center;
   }
 }
