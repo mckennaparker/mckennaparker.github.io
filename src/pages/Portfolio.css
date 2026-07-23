@@ -9,7 +9,7 @@
   height: 70.1vh;
   position: fixed;
   top: 116px;
-  right: 24px;
+  right: 8px;
   overflow: auto;
   text-align: right;
   display: flex;
@@ -20,10 +20,20 @@
 .portfolio-link {
   text-decoration: none;
   color: #091B2F;
+  font-weight: bold;
+}
+
+.portfolio-link>p {
+  padding-right: 8px;
 }
 
 .portfolio-link:hover {
   color: #163D64;
+}
+
+.portfolio-link:focus {
+  color: #163D64;
+  border-right: 8px solid #163D64;
 }
 
 @media screen and (width <=1000px) {
@@ -100,8 +110,10 @@
 
 .portfolio-slider .slick-track {
   display: flex !important;
-  gap: 24px;
   align-items: stretch;
+  gap: 16px;
+  justify-content: space-between;
+  padding-right: 4px;
 }
 
 .portfolio-slider .slick-slide {

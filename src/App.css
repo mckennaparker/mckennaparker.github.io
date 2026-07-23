@@ -165,7 +165,7 @@ p {
   flex-direction: row;
   gap: 24px;
   justify-content: space-between;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
 }
 
 .about>* {
@@ -329,7 +329,7 @@ p {
   min-width: 300px;
   flex: 1 1 0;
   border-radius: 16px;
-  padding: 16px;
+  padding: 16px 16px 24px 16px;
   border: 2px solid #8FB8D8 inside;
   background: #FAFAFA;
 }
