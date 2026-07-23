@@ -37,7 +37,28 @@
 }
 
 @media screen and (width <=1000px) {
-  .portfolio-nav {}
+  .portfolio-nav {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    height: fit-content;
+    width: 100%;
+  }
+
+  .portfolio-link {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .portfolio-link:focus {
+    border-right: none;
+    border-bottom: 4px solid #163D64;
+  }
+
+  .portfolio-link>p {
+    padding-right: 0;
+  }
 }
 
 .portfolio-content {
