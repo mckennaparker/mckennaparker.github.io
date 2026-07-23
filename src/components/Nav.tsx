@@ -1,7 +1,7 @@
 import { Outlet, NavLink, useLocation } from 'react-router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 function onClick() {
     var links = document.getElementById("nav-links");
@@ -10,9 +10,29 @@ function onClick() {
 
 function Nav() {
     const location = useLocation();
+    const [scrollProgress, setScrollProgress] = useState(0);
 
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0 });
+    }, [location.pathname]);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+            if (totalScroll > 0) {
+                const currentScroll = window.scrollY;
+                setScrollProgress((currentScroll / totalScroll) * 100);
+            } else {
+                setScrollProgress(0);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        handleScroll();
+
+        return () => window.removeEventListener('scroll', handleScroll);
     }, [location.pathname]);
 
     return (
@@ -31,6 +51,7 @@ function Nav() {
                     </button>
                 </div>
             </nav>
+            <div className="scroll-bar" style={{ width: `${scrollProgress}%` }}></div>
             <Outlet />
         </div>
     );

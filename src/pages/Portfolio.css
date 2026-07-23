@@ -37,9 +37,7 @@
 }
 
 @media screen and (width <=1000px) {
-  .portfolio-link>p {
-    font-size: 14px;
-  }
+  .portfolio-nav {}
 }
 
 .portfolio-content {

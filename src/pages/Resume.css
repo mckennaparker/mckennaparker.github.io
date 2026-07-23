@@ -1,9 +1,31 @@
+.resume-content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
 .resume-frame {
     width: 80%;
-    min-height: 70.1vh;
-    margin: 0 auto 48px auto;
+    min-height: 70vh;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 1279px) {
+    .resume-frame {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .resume-frame {
+        width: 100%;
+    }
 }

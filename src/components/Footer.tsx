@@ -29,7 +29,7 @@ function Footer() {
                 }}>
                     <FontAwesomeIcon icon={faEnvelope} size="2x" />
                 </a>
-                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/McKennaParkerResume.pdf" download="McKennaParkerResume.pdf">
                     <FontAwesomeIcon icon={faFile} size="2x" />
                 </a>
             </div>
