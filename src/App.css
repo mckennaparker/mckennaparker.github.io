@@ -262,11 +262,14 @@ p {
   background-color: var(--lightest);
   color: var(--darkest);
   border: none;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .btn-primary:hover {
   background-color: var(--lighter);
   color: var(--darkest);
+  cursor: pointer;
 }
 
 .projects>.btn-primary {
