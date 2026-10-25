@@ -1,5 +1,4 @@
 import './ProjectPage.css'
-import Footer from '../../components/Footer'
 
 function Nightlight() {
     return (
@@ -21,7 +20,6 @@ function Nightlight() {
                     </ol>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 };

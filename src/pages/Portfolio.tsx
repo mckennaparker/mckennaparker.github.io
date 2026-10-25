@@ -2,11 +2,10 @@ import { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Footer from '../components/Footer.tsx';
 import ProjectCard from '../components/ProjectCard.tsx';
 import './Portfolio.css';
 import { projects } from '../data/projects.ts';
-import { Link, Outlet, useLocation } from 'react-router'
+import { Outlet, useLocation } from 'react-router'
 import type { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from 'react';
 
 const SlickSlider = ((Slider as unknown as { default?: typeof Slider }).default ?? Slider) as typeof Slider;
@@ -74,12 +73,6 @@ function Portfolio() {
     return (
         <div className="portfolio">
             <div className="portfolio-content">
-                <div className="portfolio-nav">
-                    <Link className="portfolio-link" to={{ pathname: '/portfolio', hash: '#graphics' }}><p>Graphics</p></Link>
-                    <Link className="portfolio-link" to={{ pathname: '/portfolio', hash: '#games' }}><p>Games</p></Link>
-                    <Link className="portfolio-link" to={{ pathname: '/portfolio', hash: '#tech-art' }}><p>Tech Art</p></Link>
-                    <Link className="portfolio-link" to={{ pathname: '/portfolio', hash: '#ui-ux' }}><p>UI/UX</p></Link>
-                </div>
                 <div className="project-sections">
                     <div id="graphics" className="project-section">
                         <div className="section-text">
@@ -133,7 +126,6 @@ function Portfolio() {
                     </div>
                 </div>
             </div>
-            <Footer />
             <Outlet />
         </div>
     );

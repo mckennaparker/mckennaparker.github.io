@@ -1,5 +1,4 @@
 import './ProjectPage.css'
-import Footer from '../../components/Footer'
 
 function GumballSimulation() {
     return (
@@ -21,7 +20,6 @@ function GumballSimulation() {
                     </ol>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 };

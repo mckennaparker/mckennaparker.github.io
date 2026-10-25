@@ -1,16 +1,17 @@
 .blog {
-  width: 100%;
   gap: 48px;
   display: flex;
   flex-direction: column;
   margin: 0;
+  margin-left: 272px;
   padding: 0;
 }
 
 .blog-content {
-  width: 80%;
+  width: 90%;
   max-width: 1400px;
   margin: 0 auto;
+  margin-top: 2dvh;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -25,31 +26,5 @@
 .blog-card h2,
 .blog-card p {
   margin: 0;
-}
-
-.blog-card p {
-  color: rgba(9, 27, 47, 0.9);
-}
-
-.footer {
-  width: 100%;
-  background-color: #A9AAF4;
-  color: #091B2F;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4px;
-  padding: 16px 0 4px 0;
-}
-
-.footer .social-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-}
-
-.footer a {
-  color: #091B2F;
+  color: var(--darkest);
 }

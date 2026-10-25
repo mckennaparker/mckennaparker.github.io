@@ -33,7 +33,6 @@ function Footer() {
                     <FontAwesomeIcon icon={faFile} size="2x" />
                 </a>
             </div>
-            <p>© 2026 McKenna Parker. All rights reserved.</p>
         </div>
     );
 };

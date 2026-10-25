@@ -1,5 +1,4 @@
 import './ProjectPage.css'
-import Footer from '../../components/Footer'
 
 function ProceduralWinterVillage() {
     return (
@@ -21,7 +20,6 @@ function ProceduralWinterVillage() {
                     </ol>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 };

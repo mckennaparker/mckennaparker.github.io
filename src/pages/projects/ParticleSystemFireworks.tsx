@@ -1,5 +1,4 @@
 import './ProjectPage.css'
-import Footer from '../../components/Footer'
 
 function ParticleSystemFireworks() {
     return (
@@ -21,7 +20,6 @@ function ParticleSystemFireworks() {
                     </ol>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 };

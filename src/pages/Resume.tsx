@@ -1,5 +1,4 @@
 import './Resume.css'
-import Footer from '../components/Footer'
 
 function Resume() {
     return (
@@ -8,7 +7,6 @@ function Resume() {
                 <a href="McKennaParkerResume.pdf" download="McKennaParkerResume.pdf"><button className="btn-primary btn btn-downlaod">Download Resume</button></a>
                 <iframe className="resume-frame" src="McKennaParkerResume.pdf" />
             </div>
-            <Footer />
         </div>
     );
 };

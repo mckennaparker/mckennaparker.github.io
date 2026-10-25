@@ -1,5 +1,4 @@
 import './ProjectPage.css'
-import Footer from '../../components/Footer'
 
 function ProceduralFireball() {
     return (
@@ -21,7 +20,6 @@ function ProceduralFireball() {
                     </ol>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 };

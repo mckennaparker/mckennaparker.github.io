@@ -1,10 +1,18 @@
-.blog-content {
+.blog-post {
+    margin: 0;
+    margin-left: 272px;
+    padding: 0;
+}
+
+.blog-post-content {
+    width: 90%;
     max-width: 1000px;
     margin: 0 auto;
+    margin-top: 2dvh;
     display: flex;
     flex-direction: column;
     gap: 48px;
-    margin-bottom: 48px;
+    margin-bottom: 2dvh;
 }
 
 .author-info {
@@ -21,7 +29,7 @@
     border-radius: 50%;
 }
 
-.blog-video {
+.blog-post-video {
     border-radius: 10px;
     overflow: hidden;
     z-index: 1;
@@ -35,27 +43,27 @@
     margin: 0 auto;
 }
 
-.blog-sections {
+.blog-post-sections {
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
 
-.blog-section {
+.blog-post-section {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.blog-section h3 {
+.blog-post-section h3 {
     margin-bottom: 8px;
 }
 
-.blog-section h4 {
+.blog-post-section h4 {
     margin-bottom: 8px;
 }
 
-.blog-section p {
+.blog-post-subsection p {
     font-size: 18px;
     line-height: 1.3;
     margin-bottom: 4px;

@@ -1,11 +1,10 @@
 import './BlogPost.css'
-import Footer from '../../components/Footer'
 
 function HoudiniLearningLogFoundationsWelcome() {
     return (
         <div className="blog-post">
-            <div className="blog-content content">
-                <div className="blog-header">
+            <div className="blog-post-content content">
+                <div className="blog-post-header">
                     <div className="meta-info">
                         <p>June 8, 2026 · 5 min read</p>
                     </div>
@@ -15,7 +14,7 @@ function HoudiniLearningLogFoundationsWelcome() {
                         <p>By McKenna Parker</p>
                     </div>
                 </div>
-                <div className="blog-video">
+                <div className="blog-post-video">
                     <video
                         autoPlay
                         loop
@@ -26,15 +25,15 @@ function HoudiniLearningLogFoundationsWelcome() {
                         <source src="../blogs/gumballs.mp4" type="video/mp4" />
                     </video>
                 </div>
-                <div className="blog-sections">
-                    <div className="blog-section">
+                <div className="blog-post-sections">
+                    <div className="blog-post-section">
                         <h3>Introduction</h3>
                         <p>The Houdini 21 Foundations Welcome course was created by Robert Magee as an onramp for beginner Houdini users. The course touches on many fundamentals of the software, including modeling, physics, texturing, lighting, and rendering. The course ends with a short tutorial on how users can take feedback and implement it easily by having a clean and organized project.</p>
                     </div>
-                    <div className="blog-section">
+                    <div className="blog-post-section">
                         <h3>Model a Cup</h3>
                         <img className="section-image" src="../blogs/cupModel.png" alt="" />
-                        <div className="blog-subsection">
+                        <div className="blog-post-subsection">
                             <h4>Process</h4>
                             <p>The main cup model is created using the basic geometry and polygon modeling tools within Houdini:</p>
                             <ol>
@@ -47,7 +46,7 @@ function HoudiniLearningLogFoundationsWelcome() {
                                 <li>Subdivide the model to get more polygons to work with. Then output to a Null node and name it CUP_OUT.</li>
                             </ol>
                         </div>
-                        <div className="blog-subsection">
+                        <div className="blog-post-subsection">
                             <h4>Hotkeys & Shortcuts</h4>
                             <table>
                                 <thead>
@@ -149,13 +148,13 @@ function HoudiniLearningLogFoundationsWelcome() {
                             </table>
                         </div>
                     </div>
-                    <div className="blog-section">
+                    <div className="blog-post-section">
                         <h3>Work with Nodes</h3>
-                        <div className="blog-subsection">
+                        <div className="blog-post-subsection">
                             <h4>Process</h4>
                             <p>This section of the course was really meant to get users comfortable working with Houdini's node-based system, so there wasn't much done to change the cup itself. One thing that was added is a switch node with two tubes of different sizes and colors so that users can change the end result quickly by switching the starting nodes. Another change was the matchsize node and color nodes were switched to show that order does not effect some nodes. Other than these changes to the node structure itself, there were just tips and tricks about how to stay organized when working with nodes.</p>
                         </div>
-                        <div className="blog-subsection">
+                        <div className="blog-post-subsection">
                             <h4>Hotkeys & Shortcuts</h4>
                             <p>I didn't include the notes column in this table because all of these shortcuts require you to be in the Network View.</p>
                             <table>
@@ -218,10 +217,10 @@ function HoudiniLearningLogFoundationsWelcome() {
                             </table>
                         </div>
                     </div>
-                    <div className="blog-section">
+                    <div className="blog-post-section">
                         <h3>Create a Gumball Simulation</h3>
                         <img className="section-image" src="../blogs/gumballSim.png" alt="" />
-                        <div className="blog-subsection">
+                        <div className="blog-post-subsection">
                             <h4>Process</h4>
                             <p>The gumballs are created using just one sphere model that is scattered many times across the dimensions of a box with variation in color and scale applied to make it more interesting. The animation aspect of the scene is then done with an RBD Bullet Solver node.</p>
                             <ol>
@@ -236,10 +235,10 @@ function HoudiniLearningLogFoundationsWelcome() {
                             </ol>
                         </div>
                     </div>
-                    <div className="blog-section">
+                    <div className="blog-post-section">
                         <h3>Layout, Lookdev, and Lighting</h3>
                         <img className="section-image" src="../blogs/cupRender.png" alt="" />
-                        <div className="blog-subsection">
+                        <div className="blog-post-subsection">
                             <h4>Process</h4>
                             <p>The rendering setup is done within the Solaris environment by importing and creating the necessary geometry, adding materials, and setting up the lighting.</p>
                             <ol>
@@ -256,10 +255,10 @@ function HoudiniLearningLogFoundationsWelcome() {
                             </ol>
                         </div>
                     </div>
-                    <div className="blog-section">
+                    <div className="blog-post-section">
                         <h3>Texture the Ground</h3>
                         <img className="section-image" src="../blogs/groundTexture.png" alt="" />
-                        <div className="blog-subsection">
+                        <div className="blog-post-subsection">
                             <h4>Process</h4>
                             <p>The ground texturing is also done in the Solaris environment by adding a COP network to the ground material and adjusting the color, specular, and nprmal maps.</p>
                             <ol>
@@ -276,7 +275,7 @@ function HoudiniLearningLogFoundationsWelcome() {
                                 <li>If the ground texture does not update right away, click the Karma XPU Persp dropdown and select "Restart Render" to update it.</li>
                             </ol>
                         </div>
-                        <div className="blog-subsection">
+                        <div className="blog-post-subsection">
                             <h4>Hotkeys & Shortcuts</h4>
                             <table>
                                 <thead>
@@ -302,10 +301,10 @@ function HoudiniLearningLogFoundationsWelcome() {
                             </table>
                         </div>
                     </div>
-                    <div className="blog-section">
+                    <div className="blog-post-section">
                         <h3>Render the Gumballs</h3>
                         <img className="section-image" src="../blogs/gumballRender.png" alt="" />
-                        <div className="blog-subsection">
+                        <div className="blog-post-subsection">
                             <h4>Process</h4>
                             <p>Rendering the gumballs is done by exporting a USD file of the gumballs, referencing it in the stage network, applying materials, and then rendering using the Karma Render node setup.</p>
                             <ol>
@@ -322,9 +321,9 @@ function HoudiniLearningLogFoundationsWelcome() {
                             </ol>
                         </div>
                     </div>
-                    <div className="blog-section">
+                    <div className="blog-post-section">
                         <h3>Last Minute Changes</h3>
-                        <div className="blog-video">
+                        <div className="blog-post-video">
                             <video
                                 autoPlay
                                 loop
@@ -335,7 +334,7 @@ function HoudiniLearningLogFoundationsWelcome() {
                                 <source src="../blogs/eggs.mp4" type="video/mp4" />
                             </video>
                         </div>
-                        <div className="blog-subsection">
+                        <div className="blog-post-subsection">
                             <h4>Process</h4>
                             <p>While not necessary, this section shows how a user can easily update their work if a client were to request changes in the model and render.</p>
                             <ol>
@@ -355,7 +354,6 @@ function HoudiniLearningLogFoundationsWelcome() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 };

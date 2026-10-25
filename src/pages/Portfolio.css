@@ -1,74 +1,20 @@
 .portfolio {
-  width: 100%;
+  gap: 48px;
+  display: flex;
+  flex-direction: column;
   margin: 0;
+  margin-left: 272px;
   padding: 0;
 }
 
-.portfolio-nav {
-  width: fit-content;
-  height: 70.1vh;
-  position: fixed;
-  top: 116px;
-  right: 8px;
-  overflow: auto;
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.portfolio-link {
-  text-decoration: none;
-  color: #091B2F;
-  font-weight: bold;
-}
-
-.portfolio-link>p {
-  padding-right: 8px;
-}
-
-.portfolio-link:hover {
-  color: #163D64;
-}
-
-.portfolio-link:focus {
-  color: #163D64;
-  border-right: 8px solid #163D64;
-}
-
-@media screen and (width <=1000px) {
-  .portfolio-nav {
-    display: flex;
-    flex-direction: row;
-    position: static;
-    height: fit-content;
-    width: 100%;
-  }
-
-  .portfolio-link {
-    text-align: center;
-    padding: 0;
-    margin: 0;
-  }
-
-  .portfolio-link:focus {
-    border-right: none;
-    border-bottom: 4px solid #163D64;
-  }
-
-  .portfolio-link>p {
-    padding-right: 0;
-  }
-}
-
 .portfolio-content {
-  width: 80%;
+  width: 90%;
   max-width: 1400px;
   margin: 0 auto;
+  margin-top: 2dvh;
   display: flex;
   flex-direction: column;
-  gap: 48px;
-  margin-bottom: 48px;
+  gap: 32px;
 }
 
 .project-sections {
@@ -163,27 +109,4 @@
 
 .project-card-portfolio .project-card-body {
   flex: 1 1 auto;
-}
-
-.footer {
-  width: 100%;
-  background-color: #A9AAF4;
-  color: #091B2F;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4px;
-  padding: 16px 0 4px 0;
-}
-
-.footer .social-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-}
-
-.footer a {
-  color: #091B2F;
 }

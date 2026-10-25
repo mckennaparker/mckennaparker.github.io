@@ -1,5 +1,4 @@
 import './ProjectPage.css'
-import Footer from '../../components/Footer'
 
 function StylizedUnityShaders() {
     return (
@@ -21,7 +20,6 @@ function StylizedUnityShaders() {
                     </ol>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 };

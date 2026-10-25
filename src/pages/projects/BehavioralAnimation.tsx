@@ -1,5 +1,4 @@
 import './ProjectPage.css'
-import Footer from '../../components/Footer'
 
 function BehavioralAnimation() {
     return (
@@ -21,7 +20,6 @@ function BehavioralAnimation() {
                     </ol>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 };
