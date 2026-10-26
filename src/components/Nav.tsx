@@ -19,10 +19,13 @@ function Nav() {
                     </NavLink>
                 </div>
                 <div id="nav-links">
-                    <NavLink to="/" end className={({ isActive }) => isActive ? "active first-link" : "first-link"} onClick={onClick}><p>About</p></NavLink>
-                    <NavLink to="/portfolio" className={({ isActive }) => isActive ? "active middle-link" : "middle-link"} onClick={onClick}><p>Portfolio</p></NavLink>
-                    <NavLink to="/blog" className={({ isActive }) => isActive ? "active middle-link" : "middle-link"} onClick={onClick}><p>Blog</p></NavLink>
-                    <NavLink to="/resume" className={({ isActive }) => isActive ? "active last-link" : "last-link"} onClick={onClick}><p>Resume</p></NavLink>
+                    <NavLink to="/" end className={({ isActive }) => isActive ? "active first-link" : "first-link main-link"} onClick={onClick}><p>About</p></NavLink>
+                    <NavLink to="/portfolio" className={({ isActive }) => isActive ? "active middle-link" : "middle-link main-link"} onClick={onClick}><p>Portfolio</p></NavLink>
+                    <NavLink to="/portfolio/games" className="dropdown-link" onClick={onClick}><p>Games</p></NavLink>
+                    <NavLink to="/portfolio/tech-art" className="dropdown-link" onClick={onClick}><p>Tech Art</p></NavLink>
+                    <NavLink to="/portfolio/design" className="dropdown-link" onClick={onClick}><p>Design</p></NavLink>
+                    <NavLink to="/blog" className={({ isActive }) => isActive ? "active middle-link" : "middle-link main-link"} onClick={onClick}><p>Blog</p></NavLink>
+                    <NavLink to="/resume" className={({ isActive }) => isActive ? "active last-link" : "last-link main-link"} onClick={onClick}><p>Resume</p></NavLink>
                 </div>
                 <div className="menu">
                     <button onClick={onClick} aria-label="Toggle menu" style={{ background: "none", border: "none", padding: "0", cursor: "pointer", color: "inherit" }}>
@@ -30,9 +33,9 @@ function Nav() {
                     </button>
                 </div>
                 <Footer />
-            </nav>
+            </nav >
             <Outlet />
-        </div>
+        </div >
     );
 };
 

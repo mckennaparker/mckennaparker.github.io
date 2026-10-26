@@ -98,6 +98,14 @@ p {
   background-color: var(--darker);
 }
 
+.dropdown-link {
+  margin: -4px 0 -4px 36px;
+}
+
+.dropdown-link p {
+  font-size: 16px;
+}
+
 .menu {
   color: var(--darkest);
   display: none;
@@ -296,7 +304,6 @@ p {
   flex: 1 1 0;
   border-radius: 16px;
   padding: 16px 16px 24px 16px;
-  border: 2px solid var(--lighter) inside;
   background: var(--lightest);
 }
 
@@ -309,7 +316,6 @@ p {
 .project-card,
 .blog-card {
   border-radius: 16px;
-  border: 2px solid var(--lighter);
   background: var(--lightest);
   transition: transform 160ms ease, box-shadow 160ms ease;
 }
@@ -350,7 +356,6 @@ p {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 16px;
 }
 
 .project-card-body {

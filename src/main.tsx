@@ -44,6 +44,7 @@ createRoot(document.getElementById('root')!).render(
           <Route index element={<App />} />
           <Route path="portfolio">
             <Route index element={<Portfolio />} />
+            <Route path=":category" element={<Portfolio />} />
             <Route path="behavioral-animation" element={<BehavioralAnimation />} />
             <Route path="physically-based-renderer" element={<PhysicallyBasedRenderer />} />
             <Route path="monte-carlo-path-tracer" element={<MonteCarloPathTracer />} />
