@@ -1,12 +1,13 @@
 import BlogCard from './components/BlogCard'
 import './App.css'
-// import { projects } from './data/projects.ts'
+import { projects } from './data/projects.ts'
 import { blogPosts } from './data/blogs.ts'
 import { takeFirst } from './data/content.ts'
 import { Link } from 'react-router'
+import ProjectCard from './components/ProjectCard.tsx'
 
 function App() {
-  // const recentProjects = takeFirst(projects, 3)
+  const recentProjects = takeFirst(projects, 3)
   const recentBlogs = takeFirst(blogPosts, 3)
 
   return (
@@ -29,6 +30,11 @@ function App() {
           <div className="projects-header">
             <h3>Recent Projects</h3>
             <Link to="/portfolio"><button className="btn btn-primary">View All Projects</button></Link>
+          </div>
+          <div className="projects-container container">
+            {recentProjects.map((project) => (
+              <ProjectCard key={project.id} className="project-card-about" project={project} />
+            ))}
           </div>
         </div>
         <div className="blogs">

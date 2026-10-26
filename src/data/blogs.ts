@@ -12,15 +12,6 @@ export interface BlogPost {
 
 const blogPostData: BlogPost[] = [
   {
-    id: 2,
-    title: 'Houdini Learning Log: Foundations VFX Course',
-    date: '2026-06-12',
-    author: 'McKenna Parker',
-    url: '/blog/houdini-learning-log-foundations-vfx',
-    tags: ['Houdini', '3D Modeling', 'Animation'],
-    snippet: 'The second entry in my Houdini learning log series where I detail my Houdini learning journey in a blog style. ',
-  },
-  {
     id: 1,
     title: 'Houdini Learning Log: Foundations Welcome Course',
     date: '2026-06-09',
