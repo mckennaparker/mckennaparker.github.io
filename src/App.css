@@ -106,73 +106,6 @@ p {
   font-size: 16px;
 }
 
-.menu {
-  color: var(--darkest);
-  display: none;
-}
-
-.menu a:hover {
-  color: var(--darker);
-  cursor: pointer;
-}
-
-.menu a.active {
-  color: var(--darker);
-}
-
-@media screen and (width <=728px) {
-  .nav {
-    padding: 8px;
-    justify-content: space-between;
-  }
-
-  #nav-links {
-    position: absolute;
-    top: 64px;
-    right: 0;
-    width: 164px;
-    display: none;
-    flex-direction: column;
-    background-color: var(--darkest);
-  }
-
-  #nav-links.menu-open {
-    display: flex;
-  }
-
-  #nav-links a {
-    padding: 0 8px;
-    color: var(--lightest);
-  }
-
-  #nav-links .first-link {
-    padding-top: 8px;
-  }
-
-  #nav-links .middle-link {
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-
-  #nav-links .last-link {
-    padding-bottom: 8px;
-  }
-
-  #nav-links a:hover {
-    color: var(--lightest);
-  }
-
-  #nav-links a.active {
-    border-right: 8px solid var(--lightest);
-    border-bottom: none;
-    color: var(--lightest);
-  }
-
-  .menu {
-    display: flex;
-  }
-}
-
 .content {
   max-width: 1400px;
   width: 90%;
@@ -213,7 +146,7 @@ p {
 }
 
 .about-info a {
-  color: var(--darkest);
+  color: var(--lighter);
   text-decoration: underline;
   font-weight: 500;
 }
@@ -344,6 +277,7 @@ p {
 
 .project-card-placeholder {
   aspect-ratio: 16 / 10;
+  border-radius: 16px;
   display: grid;
   place-items: center;
   background: linear-gradient(135deg, rgba(143, 184, 216, 0.3), rgba(169, 170, 244, 0.35));

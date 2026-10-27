@@ -1,6 +1,6 @@
 import { Outlet, NavLink } from 'react-router'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faBars } from '@fortawesome/free-solid-svg-icons'
 import Footer from './Footer.tsx'
 
 function onClick() {
@@ -26,11 +26,6 @@ function Nav() {
                     <NavLink to="/portfolio/design" className="dropdown-link" onClick={onClick}><p>Design</p></NavLink>
                     <NavLink to="/blog" className={({ isActive }) => isActive ? "active middle-link" : "middle-link main-link"} onClick={onClick}><p>Blog</p></NavLink>
                     <NavLink to="/resume" className={({ isActive }) => isActive ? "active last-link" : "last-link main-link"} onClick={onClick}><p>Resume</p></NavLink>
-                </div>
-                <div className="menu">
-                    <button onClick={onClick} aria-label="Toggle menu" style={{ background: "none", border: "none", padding: "0", cursor: "pointer", color: "inherit" }}>
-                        <FontAwesomeIcon icon={faBars} size="2x" />
-                    </button>
                 </div>
                 <Footer />
             </nav >

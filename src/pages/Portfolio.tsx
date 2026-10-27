@@ -42,11 +42,11 @@ const categorySections = {
         projects: projects.filter((project) => project.type === 'techart'),
     },
     design: {
-        id: 'ui-ux',
-        title: 'UI/UX Projects',
+        id: 'design',
+        title: 'Design Projects',
         description: 'A selection of recent projects across user interface design, human-computer interaction, and web development.',
         projects: projects.filter(
-            (project) => project.type === 'web' || project.type === 'AI/ML'
+            (project) => project.type === 'design'
         ),
     },
 } satisfies Record<string, Omit<ProjectSectionProps, 'projects'> & { projects: Project[] }>;
@@ -57,8 +57,6 @@ function Portfolio() {
         ? categorySections[category as keyof typeof categorySections]
         : undefined;
 
-    const graphicsProjects = projects.filter((project) => project.type === 'graphics' || !project.type);
-
     return (
         <div className="portfolio">
             <div className="portfolio-content">
@@ -66,12 +64,6 @@ function Portfolio() {
                     <ProjectSection {...selectedSection} />
                 ) : (
                     <div className="project-sections">
-                        <ProjectSection
-                            id="graphics"
-                            title="Graphics Projects"
-                            description="A selection of recent projects across animation, procedural modeling, and graphics work."
-                            projects={graphicsProjects}
-                        />
                         <ProjectSection {...categorySections.games} />
                         <ProjectSection {...categorySections['tech-art']} />
                         <ProjectSection {...categorySections.design} />
