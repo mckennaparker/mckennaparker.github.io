@@ -18,7 +18,7 @@ const projectData: Project[] = [
         id: 16,
         title: 'Procedural Room',
         description: 'A walkable room made up of procedurally created assets',
-        thumbnail: '',
+        thumbnail: '/projects/walkableRoom.png',
         link: 'portfolio/walkable-room',
         date: 'October 2026',
         skills: ['Houdini', 'Houdini Engine', 'Unreal Engine 5'],
