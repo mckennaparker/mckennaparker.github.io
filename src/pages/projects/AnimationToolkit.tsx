@@ -1,22 +1,22 @@
 import './ProjectPage.css'
 
-function ParticleSystemFireworks() {
+function AnimationToolkit() {
     return (
         <div className="project-page">
             <div className="project-content content">
                 <div className="project-header">
                     <div className="project-info">
-                        <h1>Particle System Fireworks</h1>
+                        <h1>Animation Toolkit</h1>
                         <p>Description coming soon...</p>
                     </div>
                     <div className="project-img">
-                        <img className="project-hero-img" src="../projects/particleSystemFireworks.png" />
+                        <img className="project-hero-img" src="../projects/behavioralAnimation.png" />
                     </div>
                 </div>
-                <div className="">
+                <div className="project-">
                     <h3>Process</h3>
                     <ol>
-                        <li>Custom Ray-Tracing Engine</li>
+                        <li>Simple following behavior</li>
                     </ol>
                 </div>
             </div>
@@ -24,4 +24,4 @@ function ParticleSystemFireworks() {
     );
 };
 
-export default ParticleSystemFireworks;
+export default AnimationToolkit;

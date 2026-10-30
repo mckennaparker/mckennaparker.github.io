@@ -21,7 +21,7 @@ function Nav() {
                 <div id="nav-links">
                     <NavLink to="/" end className={({ isActive }) => isActive ? "active first-link" : "first-link main-link"} onClick={onClick}><p>About</p></NavLink>
                     <NavLink to="/portfolio" className={({ isActive }) => isActive ? "active middle-link" : "middle-link main-link"} onClick={onClick}><p>Portfolio</p></NavLink>
-                    <NavLink to="/portfolio/games" className="dropdown-link" onClick={onClick}><p>Games</p></NavLink>
+                    <NavLink to="/portfolio/games" className="dropdown-link" onClick={onClick}><p>Game Dev</p></NavLink>
                     <NavLink to="/portfolio/tech-art" className="dropdown-link" onClick={onClick}><p>Tech Art</p></NavLink>
                     <NavLink to="/portfolio/design" className="dropdown-link" onClick={onClick}><p>Design</p></NavLink>
                     <NavLink to="/blog" className={({ isActive }) => isActive ? "active middle-link" : "middle-link main-link"} onClick={onClick}><p>Blog</p></NavLink>

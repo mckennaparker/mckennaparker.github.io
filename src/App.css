@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Parkinsans:wght@300..800&family=Righteous&display=swap');
 
+/* Styles that apply to all */
 :root {
   --darkest: #1A1238;
   --darker: #492F9C;
@@ -21,6 +22,7 @@ body {
   padding: 0;
 }
 
+/* Styles for App page */
 .App {
   display: flex;
   flex-direction: column;
@@ -51,6 +53,7 @@ p {
   line-height: 1.6;
 }
 
+/* Styles for Nav */
 .nav {
   background-color: var(--lightest);
   position: fixed;
@@ -106,10 +109,15 @@ p {
   font-size: 16px;
 }
 
+/* Styles for About Page */
+
 .content {
   max-width: 1400px;
   width: 90%;
   margin: 2dvh auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .about {
@@ -117,79 +125,87 @@ p {
   display: flex;
   flex-direction: row;
   gap: 24px;
-  justify-content: space-between;
-  margin-bottom: 48px;
-}
-
-.about>* {
-  flex: 1 1 0;
-  min-width: 0;
+  color: var(--darkest);
+  background-color: var(--lightest);
+  border-radius: 16px;
+  padding: 16px;
 }
 
 .about-img {
-  display: flex;
-  flex-direction: row;
-  gap: 24px;
-}
-
-.about-img-main {
-  max-width: 500px;
-  min-width: 256px;
-  width: 100%;
-  display: block;
-  border-radius: 8px;
+  height: 320px;
   object-fit: cover;
+  border-radius: 8px;
 }
 
-.about-info h2 {
-  margin-bottom: 16px;
+.about-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .about-info a {
-  color: var(--lighter);
-  text-decoration: underline;
+  color: var(--darker);
   font-weight: 500;
+  text-decoration: none;
 }
 
-.projects {
+.about-info a:hover {
+  text-decoration: underline;
+}
+
+.experience {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: var(--darkest);
+  background-color: var(--lightest);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.experience-list {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin-bottom: 24px;
 }
 
-.projects-header {
+.experience-card {
+  width: 100%;
+  height: fit-content;
   display: flex;
+  flex-direction: row;
+  gap: 16px;
+  color: var(--lightest);
+  background-color: var(--darkest);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.experience-card-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.experience-card-body-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.project-list {
+.experience-card-list {
   margin: 0;
 }
 
-.project-card-about {
-  color: var(--darkest);
-  max-width: 600px;
-  max-height: 600px;
-  height: 1fr;
-  display: flex;
+.experience-card-list li {
+  margin: 0 0 0 8px;
 }
 
-.project-card-about .project-card-link {
-  height: 100%;
-}
-
-.project-card-about .project-card-body {
-  flex: 1 1 auto;
-}
-
-@media screen and (min-width: 1200px) {
-  .project-list>.slick-dots {
-    display: none;
-  }
-}
-
+/* Styles for buttons and cards */
 .btn {
   border-radius: 8px;
   padding: 8px 16px;
@@ -201,34 +217,17 @@ p {
 }
 
 .btn-primary {
-  background-color: var(--lightest);
-  color: var(--darkest);
+  background-color: var(--darkest);
+  color: var(--lightest);
   border: none;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .btn-primary:hover {
-  background-color: var(--lighter);
-  color: var(--darkest);
+  background-color: var(--darker);
+  color: var(--lightest);
   cursor: pointer;
-}
-
-.projects>.btn-primary {
-  width: 200px;
-}
-
-.blogs {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.blog-list-about {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 20px;
 }
 
 .project-card {
@@ -358,6 +357,7 @@ p {
   font-size: 14px;
 }
 
+/* Styles for Footer */
 .footer {
   width: 100%;
   color: var(--darkest);
@@ -374,21 +374,4 @@ p {
   color: var(--darkest);
   margin: 0;
   padding: 0;
-}
-
-@media (max-width: 900px) {
-  .about {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about>* {
-    flex: 0 0 auto;
-  }
-
-  .about-img-main {
-    max-width: 720px;
-    width: 100%;
-    align-items: center;
-  }
 }

@@ -1,22 +1,22 @@
 import './ProjectPage.css'
 
-function ProceduralFireball() {
+function PhysicsInvaders() {
     return (
         <div className="project-page">
             <div className="project-content content">
                 <div className="project-header">
                     <div className="project-info">
-                        <h1>Procedural Fireball</h1>
+                        <h1>Physics Invaders</h1>
                         <p>Description coming soon...</p>
                     </div>
                     <div className="project-img">
-                        <img className="project-hero-img" src="../projects/fireball.png" />
+                        <img className="project-hero-img" src="../projects/physicsInvaders.png" />
                     </div>
                 </div>
-                <div className="">
+                <div className="project-">
                     <h3>Process</h3>
                     <ol>
-                        <li>Custom Ray-Tracing Engine</li>
+                        <li>Simple following behavior</li>
                     </ol>
                 </div>
             </div>
@@ -24,4 +24,4 @@ function ProceduralFireball() {
     );
 };
 
-export default ProceduralFireball;
+export default PhysicsInvaders;
