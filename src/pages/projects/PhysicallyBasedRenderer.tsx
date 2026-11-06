@@ -1,5 +1,3 @@
-import './ProjectPage.css'
-
 function PhysicallyBasedRenderer() {
     return (
         <div className="project-page">

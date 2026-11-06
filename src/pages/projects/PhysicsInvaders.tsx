@@ -1,5 +1,3 @@
-import './ProjectPage.css'
-
 function PhysicsInvaders() {
     return (
         <div className="project-page">

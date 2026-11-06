@@ -69,9 +69,9 @@ function Portfolio() {
                             <p>Throughout my time at Penn, both inside and outside of the classroom, I've enjoyed honing my technical and design skills, often developing projects that utilize both skillsets. The buttons below will take you to portfolio pages showcasing projects exemplifying my work within that area.</p>
                         </div>
                         <div className="portfolio-main-buttons">
-                            <NavLink to="/portfolio/games"><button className="btn btn-primary">Game Development</button></NavLink>
-                            <NavLink to="/portfolio/tech-art"><button className="btn btn-primary">Technical Art</button></NavLink>
-                            <NavLink to="/portfolio/design"><button className="btn btn-primary">Interface and Experience Design</button></NavLink>
+                            <NavLink to="/portfolio/games"><button className="btn btn-primary">Game Development ➜</button></NavLink>
+                            <NavLink to="/portfolio/tech-art"><button className="btn btn-primary">Technical Art ➜</button></NavLink>
+                            <NavLink to="/portfolio/design"><button className="btn btn-primary">Product and UI/UX Design ➜</button></NavLink>
                         </div>
                     </div>
                 )}

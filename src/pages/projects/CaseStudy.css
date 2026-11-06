@@ -1,0 +1,199 @@
+.project-page h2 {
+    margin: 16px 0 8px 0;
+}
+
+.project-header-text {
+    margin-bottom: 16px;
+}
+
+.project-header-text h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--lighter);
+}
+
+.project-header-text h3 {
+    font-size: 1.5em;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.project-header-image img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+#path-image img {
+    height: 512px;
+    width: auto;
+}
+
+.project-header-image iframe {
+    width: 100%;
+    height: 512px;
+    border-radius: 16px;
+    border: none;
+}
+
+.project-overview {
+    margin: 16px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: space-between;
+}
+
+.overview-item {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightest);
+    width: 100%;
+    border-radius: 16px;
+    color: var(--darker);
+    padding: 8px;
+}
+
+.overview-item p {
+    color: var(--darkest);
+    font-weight: bold;
+}
+
+.skill-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.skill-list>.tag-chip {
+    margin: 0;
+    padding: 6px;
+    color: var(--lightest);
+    list-style: none;
+    margin: 0;
+}
+
+.project-ul {
+    margin-left: 10px;
+    list-style: '➜ ' inside;
+}
+
+.project-ol {
+    margin-left: 10px;
+    list-style-position: inside;
+}
+
+.project-problem li {
+    margin: 10px 0;
+}
+
+.research-image {
+    display: flex;
+    justify-content: center;
+}
+
+.research-image img {
+    width: 100%;
+    margin: 16px auto;
+    border-radius: 16px;
+}
+
+.prototyping-image {
+    display: flex;
+    justify-content: center;
+}
+
+.prototyping-image img {
+    width: 100%;
+    margin: 16px auto;
+    border-radius: 16px;
+}
+
+.testing-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.testing-footer img {
+    width: 280px;
+    border-radius: 16px;
+}
+
+.testing-meal-planning {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.testing-meal-planning img {
+    width: 280px;
+    border-radius: 16px;
+}
+
+.testing-grocery-lists {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.testing-grocery-lists img {
+    width: 280px;
+    border-radius: 16px;
+}
+
+.solution-image img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 16px auto;
+    border-radius: 16px;
+}
+
+.desktop-solution-image img {
+    width: 80%;
+    border-radius: 16px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    margin: 16px auto;
+}
+
+@media (max-width: 800px) {
+    .overview {
+        flex-direction: column;
+    }
+
+    .overview-item {
+        width: 100%;
+        margin: 0;
+    }
+
+    .first-item,
+    .second-item {
+        border-right: none;
+        border-bottom: 1px solid var(--light-gray);
+        padding-bottom: 16px;
+    }
+
+    .testing-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testing-meal-planning {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .testing-grocery-lists {
+        flex-direction: column;
+        align-items: center;
+    }
+}

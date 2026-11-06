@@ -1,5 +1,3 @@
-import './ProjectPage.css'
-
 function MonteCarloPathTracer() {
     return (
         <div className="project-page">

@@ -2,10 +2,11 @@
 
 /* Styles that apply to all */
 :root {
-  --darkest: #1A1238;
-  --darker: #492F9C;
-  --lighter: #C7B8FF;
-  --lightest: #E7E0FF;
+  --darkest: #181818;
+  --darker: #484848;
+  --mid: #7c7c7c;
+  --lighter: #b2b2b2;
+  --lightest: #ececec;
 }
 
 * {
@@ -235,7 +236,7 @@ p {
   min-width: 300px;
   flex: 1 1 0;
   border-radius: 16px;
-  padding: 16px 16px 24px 16px;
+  padding: 16px;
   background: var(--lightest);
 }
 
@@ -321,7 +322,7 @@ p {
 .tag-chip {
   border-radius: 999px;
   background: var(--darkest);
-  color: var(--lighter);
+  color: var(--lightest);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.02em;

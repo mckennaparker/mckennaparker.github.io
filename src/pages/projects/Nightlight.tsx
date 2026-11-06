@@ -1,5 +1,3 @@
-import './ProjectPage.css'
-
 function Nightlight() {
     return (
         <div className="project-page">

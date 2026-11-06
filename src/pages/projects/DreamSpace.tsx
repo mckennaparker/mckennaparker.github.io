@@ -1,5 +1,3 @@
-import './ProjectPage.css'
-
 function DreamSpace() {
     return (
         <div className="project-page">

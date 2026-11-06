@@ -1,5 +1,3 @@
-import './ProjectPage.css'
-
 function GumballSimulation() {
     return (
         <div className="project-page">

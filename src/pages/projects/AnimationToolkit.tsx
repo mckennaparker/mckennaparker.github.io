@@ -1,5 +1,3 @@
-import './ProjectPage.css'
-
 function AnimationToolkit() {
     return (
         <div className="project-page">

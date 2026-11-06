@@ -1,5 +1,3 @@
-import './ProjectPage.css'
-
 function ProceduralRoom() {
     return (
         <div className="project-page">

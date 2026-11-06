@@ -1,5 +1,3 @@
-import './ProjectPage.css'
-
 function ProceduralWinterVillage() {
     return (
         <div className="project-page">

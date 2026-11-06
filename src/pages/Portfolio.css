@@ -36,8 +36,9 @@
 .portfolio-main-buttons {
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
 }
 
 .project-section {

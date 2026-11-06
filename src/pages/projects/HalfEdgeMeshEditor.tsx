@@ -1,5 +1,3 @@
-import './ProjectPage.css'
-
 function HalfEdgeMeshEditor() {
     return (
         <div className="project-page">
