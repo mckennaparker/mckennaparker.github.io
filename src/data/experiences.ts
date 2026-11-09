@@ -11,7 +11,7 @@ const experienceData: Experience[] = [
     {
         id: 5,
         title: 'Inspiring Future Innovators Summit',
-        details: ['Collaborated on a team with 4 peers and 2 mentors'],
+        details: [],
         date: 'October 2026'
     },
     {

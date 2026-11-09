@@ -15,7 +15,7 @@ function Nav() {
                 <div className="nav-header">
                     <NavLink to="/" className="logo-link">
                         <h4 className="nav-header-title">McKenna Parker</h4>
-                        <p className="nav-header-subtitle">Graphics @ UPenn</p>
+                        <p className="nav-header-subtitle">Technologist & Designer</p>
                     </NavLink>
                 </div>
                 <div id="nav-links">

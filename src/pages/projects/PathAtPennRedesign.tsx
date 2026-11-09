@@ -7,7 +7,7 @@ function PathAtPennRedesign() {
             <div className="project-content content">
                 <section className="project-header">
                     <div className="project-header-text">
-                        <h3>Create your dream schedule easier with</h3>
+                        <h3 className="path-at-penn-h3">Create your dream schedule easier with</h3>
                         <h1>Path@Penn Redesigned</h1>
                     </div>
                     <div id="path-image" className="project-header-image">
@@ -16,18 +16,23 @@ function PathAtPennRedesign() {
                 </section>
                 <section className="project-overview">
                     <div className="overview-item first-item">
-                        <h3>Role</h3>
+                        <h3 className="path-at-penn-h3">Role</h3>
                         <p>Product (Re)Designer</p>
                     </div>
                     <div className="overview-item second-item">
-                        <h3>Timeline</h3>
+                        <h3 className="path-at-penn-h3">Timeline</h3>
                         <p>January - March 2026</p>
                     </div>
                     <div className="overview-item">
-                        <h3>Skills</h3>
+                        <h3 className="path-at-penn-h3">Team</h3>
+                        <p>Just me</p>
+                    </div>
+                    <div className="overview-item">
+                        <h3 className="path-at-penn-h3">Skills</h3>
                         <ul className="skill-list">
-                            <li className="tag-chip">UI/UX Design</li>
                             <li className="tag-chip">Prototyping</li>
+                            <li className="tag-chip">User Research</li>
+                            <li className="tag-chip">Usability Testing</li>
                             <li className="tag-chip">Figma</li>
                         </ul>
                     </div>

@@ -1,5 +1,37 @@
+/* Individualized header colors for each design project */
+.young-chef-h3 {
+    color: var(--lighter-green);
+}
+
+.young-chef-h2 {
+    color: var(--light-green);
+}
+
+.young-chef-h1 {
+    color: var(--light-green);
+}
+
+.ultifilm-h3 {
+    color: var(--lightest-blue);
+}
+
+.ultifilm-h2 {
+    color: var(--light-blue);
+}
+
+.ultifilm-h1 {
+    color: var(--light-blue);
+}
+
+/* Design project styles for all pages */
+
 .project-page h2 {
     margin: 16px 0 8px 0;
+}
+
+.project-page p {
+    font-size: 20px;
+    line-height: 1.4;
 }
 
 .project-header-text {
@@ -9,7 +41,6 @@
 .project-header-text h1 {
     font-size: 3em;
     font-weight: bold;
-    color: var(--lighter);
 }
 
 .project-header-text h3 {
@@ -46,48 +77,28 @@
 .overview-item {
     display: flex;
     flex-direction: column;
-    background-color: var(--lightest);
-    width: 100%;
-    border-radius: 16px;
-    color: var(--darker);
-    padding: 8px;
-}
-
-.overview-item p {
-    color: var(--darkest);
-    font-weight: bold;
+    width: fit-content;
+    gap: 0px;
 }
 
 .skill-list {
-    margin: 0;
+    margin: 4px 0 0 0;
     padding: 0;
     list-style: none;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 6px;
 }
 
 .skill-list>.tag-chip {
     margin: 0;
-    padding: 6px;
-    color: var(--lightest);
+    padding: 4px 8px;
+    color: var(--darkest);
     list-style: none;
     margin: 0;
-}
-
-.project-ul {
-    margin-left: 10px;
-    list-style: '➜ ' inside;
-}
-
-.project-ol {
-    margin-left: 10px;
-    list-style-position: inside;
-}
-
-.project-problem li {
-    margin: 10px 0;
+    background-color: var(--lightest);
+    font-size: 14px;
 }
 
 .research-image {
@@ -112,38 +123,28 @@
     border-radius: 16px;
 }
 
-.testing-footer {
+.project-testing {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.project-testing h2 {
+    margin-bottom: -24px;
+}
+
+.testing-section {
     display: flex;
     flex-direction: row;
     gap: 16px;
     margin: 16px 0;
 }
 
-.testing-footer img {
-    width: 280px;
-    border-radius: 16px;
+.testing-section h3 {
+    margin-bottom: 8px;
 }
 
-.testing-meal-planning {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    margin: 16px 0;
-}
-
-.testing-meal-planning img {
-    width: 280px;
-    border-radius: 16px;
-}
-
-.testing-grocery-lists {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    margin: 16px 0;
-}
-
-.testing-grocery-lists img {
+.testing-section img {
     width: 280px;
     border-radius: 16px;
 }
@@ -156,13 +157,42 @@
     border-radius: 16px;
 }
 
-.desktop-solution-image img {
-    width: 80%;
-    border-radius: 16px;
-    vertical-align: middle;
+.problem-solution-pair {
     display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
     justify-content: center;
-    margin: 16px auto;
+    align-items: center;
+}
+
+.problem {
+    color: var(--darkest);
+    background-color: var(--lightest);
+    border-radius: 16px;
+    padding: 8px 16px;
+}
+
+.arrow {
+    margin: 0 0 4px 0;
+}
+
+.solution {
+    color: var(--darkest);
+    background-color: var(--lighter-green);
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.desktop-solution-images {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.desktop-solution-image img {
+    width: 100%;
+    border-radius: 16px;
 }
 
 @media (max-width: 800px) {

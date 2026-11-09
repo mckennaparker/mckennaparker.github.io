@@ -7,6 +7,10 @@
   --mid: #7c7c7c;
   --lighter: #b2b2b2;
   --lightest: #ececec;
+  --light-green: #7DB29B;
+  --lighter-green: #C3E5D7;
+  --light-blue: #797FF2;
+  --lightest-blue: #bec1ff;
 }
 
 * {
